@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Feather } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -24,7 +24,7 @@ export function Logo({ variant = "dark", className }: LogoProps) {
             : "bg-forest/5 ring-forest/25 group-hover:bg-forest/10",
         )}
       >
-        <Feather
+        <BookOpen
           className={cn("h-4 w-4", isLight ? "text-bronze-200" : "text-forest")}
         />
       </span>
