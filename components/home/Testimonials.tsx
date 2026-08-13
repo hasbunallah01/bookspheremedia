@@ -49,7 +49,7 @@ function TestimonialCard({
  */
 export function Testimonials() {
   return (
-    <section id="testimonials" className="section overflow-x-clip bg-white">
+    <section id="testimonials" className="section overflow-x-clip bg-surface">
       <div className="container-wide">
         <SectionHeading title="What Our Authors Say" />
       </div>

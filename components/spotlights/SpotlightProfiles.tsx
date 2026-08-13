@@ -250,7 +250,7 @@ function Meta({
 export function SpotlightProfiles() {
   const full = spotlights.filter((s) => s.fullDescription);
   return (
-    <section className="section bg-white">
+    <section className="section bg-surface">
       <div className="container-narrow space-y-12">
         {full.map((item) => (
           <SpotlightProfile key={item.authorName} item={item} />

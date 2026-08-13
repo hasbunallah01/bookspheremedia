@@ -7,7 +7,7 @@ import { iconMap } from "@/components/home/IconMap";
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="section bg-white">
+    <section id="how-it-works" className="section bg-surface">
       <div className="container-wide">
         <SectionHeading title="How It Works" />
         <div className="relative mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

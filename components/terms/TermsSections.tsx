@@ -122,7 +122,7 @@ function TermCard({ item, index }: { item: TermItem; index: number }) {
 
 export function TermsSections() {
   return (
-    <section className="section bg-white">
+    <section className="section bg-surface">
       <div className="container-wide grid gap-5 md:grid-cols-2">
         {termsSections.map((item, i) => (
           <TermCard key={item.number} item={item} index={i} />

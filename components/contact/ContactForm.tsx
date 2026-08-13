@@ -71,7 +71,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="section bg-white">
+    <section id="contact" className="section bg-surface">
       <div className="container-wide">
         <SectionHeading
           eyebrow={contactFormCopy.eyebrow}
@@ -255,7 +255,7 @@ function Field({
         placeholder={placeholder}
         {...register(name)}
         rows={textarea ? 5 : undefined}
-        className="w-full rounded-lg border border-mist bg-white px-4 py-3 text-sm text-charcoal outline-none transition placeholder:text-charcoal/40 focus:border-forest focus:ring-2 focus:ring-forest/15"
+        className="w-full rounded-lg border border-mist bg-surface px-4 py-3 text-sm text-charcoal outline-none transition placeholder:text-charcoal/40 focus:border-forest focus:ring-2 focus:ring-forest/15"
       />
       {error && <p className="mt-1.5 text-xs text-red-600">{error}</p>}
     </div>

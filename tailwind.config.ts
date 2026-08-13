@@ -11,12 +11,12 @@ const config: Config = {
       colors: {
         /* ===== Reference design system ===== */
         forest: {
-          DEFAULT: "#23463F",
+          DEFAULT: "#4E9782",
           50: "#EDF2F0",
           100: "#D2DFDB",
           200: "#A6BFB8",
           300: "#7A9F94",
-          400: "#4E7268",
+          400: "#4E9782",
           500: "#23463F",
           600: "#1D3B35",
           700: "#172F2A",
@@ -37,10 +37,12 @@ const config: Config = {
           900: "#2F1E0B",
         },
         sage: { DEFAULT: "#A8B7A1", light: "#C5D0C0" },
-        charcoal: "#222222",
-        ivory: "#FAF7F2",
-        stone: "#F1ECE5",
-        mist: "#E7E4DD",
+        /* ===== Night mode base (Booksphere is dark-first) ===== */
+        charcoal: "#F3EFE6",
+        ivory: "#14120E",
+        stone: "#1C1812",
+        mist: "#2E2820",
+        surface: "#221D16",
         /* ===== Legacy tokens (kept for About/Contact until redesigned) ===== */
         ink: {
           DEFAULT: "#0B0B0B",

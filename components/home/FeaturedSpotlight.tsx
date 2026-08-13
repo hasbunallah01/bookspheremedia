@@ -243,7 +243,7 @@ export function FeaturedSpotlight() {
                   type="button"
                   onClick={prev}
                   aria-label="Previous spotlight"
-                  className="grid h-9 w-9 place-items-center rounded-full border border-mist bg-white text-charcoal transition hover:border-forest hover:text-forest"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-mist bg-surface text-charcoal transition hover:border-forest hover:text-forest"
                 >
                   <ChevronLeft className="h-4 w-4" />
                 </button>
@@ -251,7 +251,7 @@ export function FeaturedSpotlight() {
                   type="button"
                   onClick={next}
                   aria-label="Next spotlight"
-                  className="grid h-9 w-9 place-items-center rounded-full border border-mist bg-white text-charcoal transition hover:border-forest hover:text-forest"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-mist bg-surface text-charcoal transition hover:border-forest hover:text-forest"
                 >
                   <ChevronRight className="h-4 w-4" />
                 </button>

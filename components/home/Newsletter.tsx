@@ -53,7 +53,7 @@ export function NewsletterForm({ variant = "inline" }: NewsletterFormProps) {
           "w-full rounded-md border px-4 py-2.5 text-sm outline-none transition",
           footer
             ? "border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:border-bronze"
-            : "border-mist bg-white text-charcoal placeholder:text-charcoal/40 focus:border-forest",
+            : "border-mist bg-surface text-charcoal placeholder:text-charcoal/40 focus:border-forest",
         )}
       />
       <button

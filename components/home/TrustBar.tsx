@@ -7,7 +7,7 @@ import { stats, communityAvatars } from "@/data/home";
 
 export function TrustBar() {
   return (
-    <section className="border-y border-mist bg-white px-6 py-12 md:px-10">
+    <section className="border-y border-mist bg-surface px-6 py-12 md:px-10">
       <div className="container-wide">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}

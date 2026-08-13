@@ -39,7 +39,7 @@ export function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 border-b bg-white transition-shadow duration-300",
+          "fixed top-0 left-0 right-0 z-50 border-b bg-surface transition-shadow duration-300",
           scrolled
             ? "border-mist shadow-[0_4px_20px_-8px_rgba(34,34,34,0.12)]"
             : "border-mist/60",

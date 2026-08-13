@@ -47,7 +47,7 @@ export function ConversationsHero() {
  */
 export function ConversationArchive() {
   return (
-    <section className="section bg-white">
+    <section className="section bg-surface">
       <div className="container-narrow space-y-8">
         {conversations.map((conversation, i) => (
           <div key={conversation.id} className="relative">

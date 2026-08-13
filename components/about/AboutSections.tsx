@@ -251,7 +251,7 @@ export function AuthorChecklist() {
 
 export function EditorialStandards() {
   return (
-    <section className="section bg-white">
+    <section className="section bg-surface">
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -296,7 +296,7 @@ export function EditorialStandards() {
 
 export function SpotlightGallery() {
   return (
-    <section className="section bg-white">
+    <section className="section bg-surface">
       <div className="container-wide">
         <BadgeEyebrow badge={gallery.badge} eyebrow={gallery.eyebrow} />
         <motion.h2
@@ -342,7 +342,7 @@ export function SpotlightGallery() {
 
 export function CommunityStats() {
   return (
-    <section className="section bg-white">
+    <section className="section bg-surface">
       <div className="container-wide">
         <BadgeEyebrow
           badge={communityStats.badge}

@@ -84,7 +84,7 @@ export function PrivacyHero() {
 
 export function EditorialStandards() {
   return (
-    <section className="section bg-white">
+    <section className="section bg-surface">
       <div className="container-wide grid items-center gap-10 md:grid-cols-2 lg:gap-16">
         <div>
           <BadgeEyebrow
@@ -183,7 +183,7 @@ export function TermsOfParticipation() {
 
 export function IPAndSecurity() {
   return (
-    <section className="section bg-white">
+    <section className="section bg-surface">
       <div className="container-wide grid gap-6 lg:grid-cols-2">
         {/* Intellectual Property */}
         <motion.div

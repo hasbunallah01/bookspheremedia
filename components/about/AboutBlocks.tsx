@@ -67,7 +67,7 @@ export function ValueGrid({
   }[columns];
 
   return (
-    <section id={id} className={cn("section", background === "white" ? "bg-white" : "bg-ivory")}>
+    <section id={id} className={cn("section", background === "white" ? "bg-surface" : "bg-ivory")}>
       <div className="container-wide">
         <BadgeEyebrow badge={badge} eyebrow={eyebrow} />
         <motion.h2
@@ -131,7 +131,7 @@ export function EditorialSplit({
   background?: "white" | "ivory";
 }) {
   return (
-    <section className={cn("section", background === "white" ? "bg-white" : "bg-ivory")}>
+    <section className={cn("section", background === "white" ? "bg-surface" : "bg-ivory")}>
       <div className="container-wide grid items-center gap-10 md:grid-cols-2 lg:gap-16">
         <motion.div
           initial={{ opacity: 0, x: imageSide === "left" ? -24 : 24 }}

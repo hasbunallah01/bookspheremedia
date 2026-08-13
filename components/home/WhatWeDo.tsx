@@ -8,7 +8,7 @@ import { iconMap } from "@/components/home/IconMap";
 /** All cards always visible — responsive grid on desktop, stacked on mobile. */
 export function WhatWeDo() {
   return (
-    <section id="what-we-do" className="section bg-white">
+    <section id="what-we-do" className="section bg-surface">
       <div className="container-wide">
         <SectionHeading title="What We Do" />
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
