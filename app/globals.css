@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --background: 20 18 14; /* Deep Warm Black */
-    --foreground: 243 239 230; /* Warm Ivory (now the text tone) */
-    --forest: 78 151 130;
+    --background: 250 247 242; /* Warm Ivory */
+    --foreground: 34 34 34; /* Rich Charcoal */
+    --forest: 35 70 63;
     --bronze: 184 120 46;
   }
 
