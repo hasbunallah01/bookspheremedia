@@ -4,10 +4,10 @@
 
 @layer base {
   :root {
-    --background: 250 247 242; /* Warm Ivory */
-    --foreground: 34 34 34; /* Rich Charcoal */
-    --forest: 35 70 63;
-    --bronze: 184 120 46;
+    --background: 248 244 237; /* Warm Ivory */
+    --foreground: 36 36 36; /* Deep Charcoal */
+    --forest: 90 31 43; /* Deep Burgundy (kept var name for compatibility) */
+    --bronze: 181 138 69; /* Antique Gold (kept var name for compatibility) */
   }
 
   * {
@@ -192,9 +192,9 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #23463f;
+  background: #5a1f2b;
   border: 3px solid #ffffff;
-  box-shadow: 0 1px 4px rgba(34, 34, 34, 0.3);
+  box-shadow: 0 1px 4px rgba(36, 36, 36, 0.3);
   transition: transform 0.15s ease;
 }
 
@@ -202,9 +202,9 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #23463f;
+  background: #5a1f2b;
   border: 3px solid #ffffff;
-  box-shadow: 0 1px 4px rgba(34, 34, 34, 0.3);
+  box-shadow: 0 1px 4px rgba(36, 36, 36, 0.3);
   transition: transform 0.15s ease;
 }
 
@@ -217,5 +217,5 @@
 }
 
 .audio-range:focus-visible {
-  box-shadow: 0 0 0 3px rgba(35, 70, 63, 0.25);
+  box-shadow: 0 0 0 3px rgba(90, 31, 43, 0.25);
 }

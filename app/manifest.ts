@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "A premium media platform connecting authors and readers through live conversations and editorial storytelling.",
     start_url: "/",
     display: "standalone",
-    background_color: "#FAF7F2",
-    theme_color: "#23463F",
+    background_color: "#F8F4ED",
+    theme_color: "#5A1F2B",
     icons: [
       { src: "/icon-192.png", sizes: "192x192", type: "image/png" },
       { src: "/icon-512.png", sizes: "512x512", type: "image/png" },

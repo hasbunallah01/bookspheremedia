@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { site } from "@/data/site";
 
-const inter = Inter({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-dmsans",
   display: "swap",
 });
 
@@ -57,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${cormorant.variable}`}>
       <body className="min-h-screen overflow-x-hidden">
         <ScrollProgress />
         <Navbar />
