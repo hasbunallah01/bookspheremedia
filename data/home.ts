@@ -108,6 +108,8 @@ export interface Spotlight {
   fullDescription?: string[];
   bookQuote?: string[];
   aboutAuthor?: string[];
+  /** True hides this entry from the homepage carousel; it still appears on the full /spotlights page. */
+  hideFromHomepage?: boolean;
 }
 
 /** Featured Spotlight carousel + full profiles. One object per author. */
@@ -220,6 +222,39 @@ export const spotlights: Spotlight[] = [
       "The Ancient Code is the first book in his Ancient Secrets series, which has since grown to thirteen novels following archaeology professor Elliot Brand.",
       "To be notified of future releases, follow T. S. Falk's Amazon author page.",
     ],
+  },
+  {
+    authorName: "Liora Blake",
+    authorTitle: "Contemporary Romance Author",
+    authorPhoto: "/images/liora-blake-avatar.jpg",
+    contactUrl: "https://www.thebentagency.com/",
+    banner: "/images/liora-blake-banner.jpg",
+    bannerAlt:
+      "Featured author interview banner for Liora Blake and her novel True North",
+    bookTitle: "True North",
+    bookCover: "/images/liora-blake-cover.webp",
+    tagline: "A small-town novelist. A bad-boy rock star. Two scarred hearts. One shot at forever.",
+    genres: ["Contemporary Romance", "Rockstar Romance"],
+    description:
+      "When small-town novelist Kate Mosely meets rock star Trevor \"Trax\" Jenkins during a TV interview, sparks fly. But when a gossip magazine exposé threatens to tear them apart, she must decide if love is worth the risk.",
+    publishedDate: "April 6, 2015",
+    language: "English",
+    pages: "319 pages",
+    learnMoreUrl: "https://www.amazon.com/Liora-Blake/e/B00LFY4VVY",
+    buyUrl: "https://www.amazon.com/True-North-Book-1-ebook/dp/B00LD1OK6U/ref=sr_1_1?crid=",
+    fullDescription: [
+      "When small-town novelist Kate Mosely meets rock star Trevor \"Trax\" Jenkins during a TV interview, sparks fly. Beneath his bad-boy exterior is a man who loves poetry, pastries, and a sharp wit that matches her own.",
+      "As their passion deepens, Kate's wounded heart begins to heal. But when a gossip magazine exposé threatens to tear them apart, she must decide if love is worth the risk.",
+      "True North is the first book in The True Series, a sizzling contemporary romance about healing, trust, and a love that's anything but quiet.",
+    ],
+    bookQuote: [
+      "As she and Trevor explored their heated chemistry, the scarred parts of Kate's heart began to heal.",
+    ],
+    aboutAuthor: [
+      "Liora Blake is a contemporary romance author living in Colorado. When she isn't writing, she's either baking cookies she shouldn't eat, inventing elaborate excuses to avoid going for a run, or asking the nice barista to sell her another quad-shot Americano.",
+      "Liora is not active on social media and does not maintain an author website. For rights inquiries, she is represented by The Bent Agency.",
+    ],
+    hideFromHomepage: true,
   },
 ];
 

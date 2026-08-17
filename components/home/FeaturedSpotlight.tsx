@@ -193,9 +193,10 @@ function MetaItem({
 }
 
 export function FeaturedSpotlight() {
+  const homepageSpotlights = spotlights.filter((s) => !s.hideFromHomepage);
   const [index, setIndex] = useState(0);
-  const count = spotlights.length;
-  const item = spotlights[index];
+  const count = homepageSpotlights.length;
+  const item = homepageSpotlights[index];
 
   const prev = () => setIndex((i) => (i - 1 + count) % count);
   const next = () => setIndex((i) => (i + 1) % count);
@@ -226,7 +227,7 @@ export function FeaturedSpotlight() {
             {/* Carousel controls — unchanged behavior */}
             <div className="flex items-center justify-between border-t border-mist px-6 py-4 md:px-8">
               <div className="flex gap-2">
-                {spotlights.map((s, i) => (
+                {homepageSpotlights.map((s, i) => (
                   <button
                     key={s.authorName}
                     type="button"
