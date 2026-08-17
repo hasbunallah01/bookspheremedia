@@ -113,41 +113,44 @@ export interface Spotlight {
 /** Featured Spotlight carousel + full profiles. One object per author. */
 export const spotlights: Spotlight[] = [
   {
-    authorName: "Jarrah White",
-    authorTitle: "Author \u2022 Filmmaker \u2022 Astrophysicist \u2022 Geologist",
-    authorPhoto: "/images/jarrah-white-avatar.jpg",
-    contactUrl: "mailto:Jarrahw@gmail.com",
-    banner: "/images/jarrah-white-banner.jpg",
+    authorName: "Clara Virginia White",
+    authorTitle: "Author, The Gracetown Novels",
+    authorPhoto: "/images/clara-virginia-white-avatar.jpg",
+    contactUrl: "https://www.instagram.com/claravirginiawhite",
+    banner: "/images/clara-virginia-white-banner.jpg",
     bannerAlt:
-      "Featured author interview panel for Jarrah White and his spy thriller Trojan SMERSH",
-    bookTitle: "Trojan SMERSH",
-    bookCover: "/images/jarrah-white-cover.jpg",
-    tagline: "What if there was something far more sinister planned for January 6?",
+      "Book Club Spotlight banner for Clara Virginia White and her novel Where the Bells Still Ring",
+    bookTitle: "Where the Bells Still Ring",
+    bookCover: "/images/clara-virginia-white-cover.jpg",
+    tagline:
+      "A small-town story about courage, community, and the clear note of enduring hope.",
     genres: [
-      "Spy Thriller",
-      "Alternative History",
-      "Political Thriller",
-      "Military Fiction",
+      "Contemporary Fiction",
+      "Literary Fiction",
+      "Small-Town & Rural Fiction",
     ],
     description:
-      "A gripping alternative-history spy thriller where rogue agent Sid Tanner uncovers a deadly conspiracy surrounding January 6, 2021. Combining espionage, political intrigue, military space missions, and international conflict, Trojan SMERSH delivers an intense story filled with danger, betrayal, and impossible choices.",
-    publishedDate: "July 13, 2026",
+      "Bitsy Mitchell has spent her life holding Gracetown together — until the town, her marriage, and a little girl waiting to be noticed all begin slipping through her hands. A quietly powerful small-town Southern story about courage, community, and enduring hope.",
+    publishedDate: "March 25, 2026",
     language: "English",
-    pages: "752 pages",
-    learnMoreUrl:
-      "https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Jarrah+White&text=Jarrah+White&sort=relevancerank&search-alias=books",
-    buyUrl: "https://a.co/d/03ihaK4U",
+    pages: "354 pages",
+    learnMoreUrl: "https://www.claravirginiawhite.com",
+    buyUrl:
+      "https://www.amazon.com/Where-Bells-Still-Ring-small-town-ebook/dp/B0GPML6JXC/ref=s",
     fullDescription: [
-      "Trojan SMERSH is an ambitious alternative-history thriller that blends espionage, geopolitics, military science, and speculative history into one high-stakes adventure.",
-      "The novel follows rogue Australian intelligence agent and former US Space Force astronaut Sid Tanner after an attempt on his life places him at the center of an international conspiracy involving the Trump administration and the infamous Russian death squad SMERSH.",
-      "Hunted by both allies and enemies, Tanner must infiltrate the January 6 Capitol riot to uncover a plot that threatens global security before his own past catches up with him.",
-      "Rich with political suspense, action, and historical imagination, the novel explores loyalty, betrayal, sacrifice, and the consequences of hidden agendas while delivering a fast-paced cinematic experience.",
+      "Bitsy Mitchell has built her life around being the person everyone depends on. She keeps the nursery schedule straight, assures Reverend Goodheart that his sermons landed, and smooths small frictions before they turn into lasting wounds. Looking after people is what she does.",
+      "In Gracetown, North Carolina, that kind of quiet care matters. Much of the town's life gathers at First Methodist Church. Gwen's newsletters grow longer and more cheerful every month. The handbell choir rehearses every Wednesday night. People show up with casseroles, concerns, and the quiet expectation that someone will notice if they don't.",
+      "Bitsy has always been that someone.",
+      "But lately the life she helps hold together is beginning to loosen at the seams. Church attendance is thinning. Her husband, Jeffrey, has grown increasingly distant. And week after week, a seven-year-old girl named Eden waits in an empty room long after every other child has been picked up.",
+      "Bitsy knows how to keep things running smoothly. She is good at it. So why, all at once, does everything feel as if it's slipping through her hands?",
+    ],
+    bookQuote: [
+      "Quietly powerful, Where the Bells Still Ring is a small-town Southern story about courage, community, and the clear note of enduring hope.",
     ],
     aboutAuthor: [
-      "Jarrah White is an Australian author, filmmaker, astrophysicist, and geologist whose passion for storytelling began during childhood, creating handmade picture books before he could even write.",
-      "Inspired by authors such as Ian Fleming and Michael Crichton, along with real historical events and classic adventure stories, Jarrah spent nearly twenty-four years developing the world of Sid Tanner before publishing his debut novel.",
-      "He holds qualifications in Screen & Media from the Sydney Institute of TAFE NSW and earned a Bachelor of Science with a major in Geology and a minor in Astronomy & Astrophysics from Macquarie University. Beyond writing, he has appeared in Australian television productions including Fat Pizza and Darradong Local Council.",
-      "Trojan SMERSH is the first installment in an ongoing Sid Tanner thriller series and fulfills a promise he made to his late step-grandfather, whose encouragement inspired the project from the very beginning.",
+      "Clara Virginia White writes stories about ordinary people facing life's hardest moments — and the hope that carries them forward.",
+      "Where the Bells Still Ring is a heartfelt novel about faith, friendship, and the power of showing up for one another. It is the first installment in The Gracetown Novels.",
+      "Learn more at claravirginiawhite.com or follow along on Instagram @claravirginiawhite.",
     ],
   },
   {
