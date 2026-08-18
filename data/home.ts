@@ -9,9 +9,9 @@ export const hero = {
   description:
     "Booksphere Media brings powerful stories to life through live interviews, visual storytelling, and meaningful connection.",
   primaryCta: { label: "Join Our Community", href: "/contact" },
-  secondaryCta: { label: "View Us Live", href: "https://youtube.com/@bookspheremedia" },
-  image: "/images/site/mic-mug.webp",
-  imageAlt: "Studio microphone beside a Booksphere mug in warm light",
+  secondaryCta: { label: "Reach Out to Us", href: "mailto:hello@bookspheremedia.website" },
+  image: "/images/site/two-mics.webp",
+  imageAlt: "Two microphones and armchairs in a podcast studio",
 } as const;
 
 export const stats = [
