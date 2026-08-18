@@ -3,14 +3,14 @@ export const site = {
   tagline: "A Home for Storytellers",
   description:
     "Booksphere Media brings powerful stories to life through live interviews, visual storytelling, and meaningful connection between authors and readers.",
-  url: "https://bookspheremedia.online",
-  email: "hello@bookspheremedia.online",
+  url: "https://bookspheremedia.website",
+  email: "hello@bookspheremedia.website",
   phone: "",
   address: "",
   hours: "Mon – Fri · 9:00 – 18:00 (UTC)",
   socials: {
     twitter: "https://twitter.com/bookspheremedia",
-    facebook: "https://www.facebook.com/share/1CtEHvGnTj/",
+    facebook: "https://www.facebook.com/share/1Ei47Lrs7v/",
     youtube: "https://youtube.com/@bookspheremedia",
   },
   nav: [

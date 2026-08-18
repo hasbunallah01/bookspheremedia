@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Twitter, Facebook, Youtube } from "lucide-react";
+import { Twitter, Facebook, Youtube, Mail } from "lucide-react";
 import { site } from "@/data/site";
 import { Logo } from "@/components/ui/Logo";
 import { NewsletterForm } from "@/components/home/Newsletter";
@@ -46,6 +46,13 @@ export function Footer() {
                   </a>
                 );
               })}
+              <a
+                href={`mailto:${site.email}`}
+                aria-label="Email"
+                className="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white/70 transition hover:border-bronze hover:bg-bronze/15 hover:text-white"
+              >
+                <Mail className="h-4 w-4" />
+              </a>
             </div>
           </div>
 
