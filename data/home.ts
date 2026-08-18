@@ -256,6 +256,40 @@ export const spotlights: Spotlight[] = [
     ],
     hideFromHomepage: true,
   },
+  {
+    authorName: "David Calloway",
+    authorTitle: "Author & Filmmaker",
+    authorPhoto: "/images/david-calloway-avatar.webp",
+    contactUrl: "mailto:david@calloway.tv",
+    banner: "/images/david-calloway-banner.jpg",
+    bannerAlt: "Author Spotlight banner for David Calloway and his novel If Someday Comes",
+    bookTitle: "If Someday Comes: A Slave's Story of Freedom",
+    bookCover: "/images/david-calloway-cover.webp",
+    tagline: "To understand America, you must first understand the Civil War.",
+    genres: ["Historical Fiction", "African American History", "Civil War Fiction"],
+    description:
+      "The true story of David Calloway's great-grandfather George, enslaved in Cleveland, Tennessee, before and during the Civil War — a family history written as historical fiction, and winner of the 2023 CIBA Goethe Award for Historical Fiction.",
+    publishedDate: "2022",
+    language: "English",
+    pages: "400+ pages",
+    learnMoreUrl: "https://us.amazon.com/stores/author/B0BM6Q15R1",
+    buyUrl:
+      "https://www.amazon.com/If-Someday-Comes-Slaves-Freedom-ebook/dp/B0BM56PLFN?ref_=ast_author_mpb",
+    fullDescription: [
+      "If Someday Comes tells the true story of David Calloway's great-grandfather, George Calloway, born into slavery in 1829 in Cleveland, Tennessee. Written as historical fiction and grounded in family history and research, the novel follows George through his final years in slavery and the years of the Civil War that followed, as he protects his family through war, famine, and upheaval.",
+      "Calloway drew on stories passed down through his family, historical records, and photographs to reconstruct George's life — a story he calls more fact than fiction, with embellishment used only where the historical record falls silent.",
+      "The book is the first in a planned series telling the stories of the men in Calloway's family, and won the Grand Prize for Historical Fiction at the 2023 CIBA Goethe Awards.",
+    ],
+    bookQuote: [
+      "Calloway shows himself to be such a talented writer of historical fiction that the biographical element of the work barely registers. – Kirkus Reviews",
+    ],
+    aboutAuthor: [
+      "David Calloway was born in Chicago and grew up in Palo Alto and Berkeley. He holds an MFA from UCLA in Film Production, and began his career as an editor before progressing to cinematographer and then producer of features and television.",
+      "He is a member of the Producer's Guild, the Director's Guild, and the Academy of Television Arts and Sciences, and serves on the boards of the Angel's Gate Cultural Center and the Offshore Racing Outreach Foundation.",
+      "Calloway lives and works in Los Angeles, California.",
+    ],
+    hideFromHomepage: true,
+  },
 ];
 
 export const howItWorks = [
