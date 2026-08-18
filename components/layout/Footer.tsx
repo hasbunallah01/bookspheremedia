@@ -1,13 +1,11 @@
 import Link from "next/link";
-import { Twitter, Facebook, Youtube, Mail } from "lucide-react";
+import { Facebook, Mail } from "lucide-react";
 import { site } from "@/data/site";
 import { Logo } from "@/components/ui/Logo";
 import { NewsletterForm } from "@/components/home/Newsletter";
 
 const socialIcons = {
-  twitter: Twitter,
   facebook: Facebook,
-  youtube: Youtube,
 } as const;
 
 const columns = [
