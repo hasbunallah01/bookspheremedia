@@ -6,9 +6,8 @@ export const termsHero = {
   description:
     "These Terms & Conditions explain the responsibilities, expectations, and agreements that apply when using Booksphere Media. By accessing our website, submitting your information, or participating in our services, you agree to these terms.",
   cta: { label: "Need Help? Contact Us", href: "/contact" },
-  image:
-    "https://images.unsplash.com/photo-1517971129774-8a2b38fa128e?auto=format&fit=crop&w=1400&q=80",
-  imageAlt: "Notebook, pen, and a cup beside books in warm light",
+  image: "/images/site/bookstack.webp",
+  imageAlt: "Open book on a stack of books in warm light",
 } as const;
 
 export interface TermItem {
@@ -147,7 +146,6 @@ export const termsCta = {
     label: "Join Our Community",
     href: "https://form.jotform.com/261917650330050",
   },
-  image:
-    "https://images.unsplash.com/photo-1524578271613-d550eacf6090?auto=format&fit=crop&w=1000&q=80",
-  imageAlt: "Open book and reading glasses in warm light",
+  image: "/images/site/mic-mug.webp",
+  imageAlt: "Studio microphone and Booksphere mug in warm light",
 } as const;

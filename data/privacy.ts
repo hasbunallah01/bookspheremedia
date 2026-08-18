@@ -7,9 +7,8 @@ export const privacyHero = {
   description:
     "Every meaningful partnership begins with trust. These policies explain how Booksphere Media protects your information, works with authors, and maintains a professional, respectful, and secure platform for our growing community.",
   cta: { label: "Contact Us", href: "/contact" },
-  image:
-    "https://images.unsplash.com/photo-1517971129774-8a2b38fa128e?auto=format&fit=crop&w=1400&q=80",
-  imageAlt: "Open notebook, pen, and a cup beside books in warm light",
+  image: "/images/site/bookstack.webp",
+  imageAlt: "Open book on a stack of books in warm light",
 } as const;
 
 export const commitment = {
@@ -131,9 +130,8 @@ export const editorialStandards = {
     "Being featured is never guaranteed.",
     "Editorial decisions are final.",
   ],
-  image:
-    "https://images.unsplash.com/photo-1524578271613-d550eacf6090?auto=format&fit=crop&w=1000&q=80",
-  imageAlt: "Reading glasses resting on an open book",
+  image: "/images/site/mic-mug.webp",
+  imageAlt: "Studio microphone and Booksphere mug in warm light",
 } as const;
 
 export const termsOfParticipation = {
@@ -174,7 +172,6 @@ export const privacyCta = {
   description:
     "Need clarification about our policies or guidelines? Our team is happy to help.",
   cta: { label: "Contact Us", href: "/contact" },
-  image:
-    "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1000&q=80",
-  imageAlt: "Coffee and an open book in warm morning light",
+  image: "/images/site/book-coffee.webp",
+  imageAlt: "Open book and coffee in warm morning light",
 } as const;

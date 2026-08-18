@@ -10,9 +10,8 @@ export const hero = {
     "Booksphere Media brings powerful stories to life through live interviews, visual storytelling, and meaningful connection.",
   primaryCta: { label: "Join Our Community", href: "/contact" },
   secondaryCta: { label: "View Us Live", href: "https://youtube.com/@bookspheremedia" },
-  image:
-    "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1200&q=80",
-  imageAlt: "Studio microphone beside stacked books in warm light",
+  image: "/images/site/mic-mug.webp",
+  imageAlt: "Studio microphone beside a Booksphere mug in warm light",
 } as const;
 
 export const stats = [
@@ -31,9 +30,8 @@ export const communityAvatars = [
 
 export const whyBooksphere = {
   title: "Why Booksphere Media",
-  image:
-    "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1000&q=80",
-  imageAlt: "Books arranged on a sunlit desk beside a plant",
+  image: "/images/site/bookstack.webp",
+  imageAlt: "Open book on a stack of books in warm light",
   items: [
     {
       icon: "heart",
@@ -401,9 +399,8 @@ export const ctaBanner = {
     "Join Booksphere Media and connect with readers through the power of live conversation.",
   primaryCta: { label: "Submit Your Story", href: "https://form.jotform.com/261917650330050" },
   secondaryCta: { label: "Learn More", href: "/about" },
-  image:
-    "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1000&q=80",
-  imageAlt: "Open book with reading glasses and coffee",
+  image: "/images/site/book-coffee.webp",
+  imageAlt: "Open book and coffee in warm light",
 } as const;
 
 export const newsletter = {

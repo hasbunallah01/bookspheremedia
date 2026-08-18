@@ -10,9 +10,8 @@ export const aboutHero = {
     "We are Booksphere Media — a platform for authors and readers to connect through live conversations, storytelling, and meaningful visibility.",
   primaryCta: { label: "Our Process", href: "#journey" },
   secondaryCta: { label: "Share Your Story", href: "/contact" },
-  image:
-    "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=1400&q=80",
-  imageAlt: "Studio microphone beside stacked books and warm lamplight",
+  image: "/images/site/mic-mug.webp",
+  imageAlt: "Studio microphone and Booksphere mug in warm light",
 } as const;
 
 export const ourStory = {
@@ -24,9 +23,8 @@ export const ourStory = {
     "We saw how many powerful stories remained unheard because authors didn't have the right platform. So we built a space where conversations matter, voices are amplified, and stories create real impact.",
     "We are more than a platform. We are a movement of storytellers, readers, and dreamers who believe in the power of words.",
   ],
-  image:
-    "https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=1200&q=80",
-  imageAlt: "Open book under warm reading lamp",
+  image: "/images/site/bookstack.webp",
+  imageAlt: "Open book on a stack of books in warm light",
 } as const;
 
 export const whoWeAre = {
@@ -38,9 +36,8 @@ export const whoWeAre = {
     "We are active, intentional, and deeply invested in the authors we feature. When you join Booksphere, our team works to present you to our audience in the most authentic and impactful way possible.",
     "Our community is growing, our conversations are real, and our commitment to amplifying author voices has never been stronger.",
   ],
-  image:
-    "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
-  imageAlt: "Author writing by hand in a notebook",
+  image: "/images/site/magic-book.webp",
+  imageAlt: "Open book with floating story icons in warm light",
 } as const;
 
 export const whatWeBelieve = {
@@ -94,9 +91,8 @@ export const mission = {
     "To elevate authors' voices and create meaningful connections through live conversations.",
   description:
     "We provide a platform that goes beyond promotion — one that honours their journey, amplifies the message, and connects authors with readers who are hungry for meaningful stories.",
-  image:
-    "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80",
-  imageAlt: "Books and warm lamp on a writing desk",
+  image: "/images/site/book-coffee.webp",
+  imageAlt: "Open book and coffee in warm light",
 } as const;
 
 export const vision = {
@@ -105,9 +101,8 @@ export const vision = {
   title: "A world where every author finds their audience.",
   description:
     "We envision a global community where stories create connection, inspire change, and build a more understanding world.",
-  image:
-    "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=900&q=80",
-  imageAlt: "Vintage globe in warm light",
+  image: "/images/site/two-mics.webp",
+  imageAlt: "Two microphones and armchairs in a podcast studio",
 } as const;
 
 export const whatMakesUsDifferent = {
@@ -238,9 +233,8 @@ export const authorChecklist = {
     "Willingness to participate",
     "Positive collaboration",
   ],
-  image:
-    "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1000&q=80",
-  imageAlt: "Library shelves filled with books",
+  image: "/images/site/magic-book.webp",
+  imageAlt: "Open book with floating story icons in warm light",
 } as const;
 
 export const editorialStandards = {
@@ -314,24 +308,24 @@ export const gallery = {
   title: "The atmosphere behind every story.",
   images: [
     {
-      src: "https://images.unsplash.com/photo-1524578271613-d550eacf6090?auto=format&fit=crop&w=900&q=80",
-      alt: "Stacked books in warm light",
+      src: "/images/site/mic-mug.webp",
+      alt: "Studio microphone and Booksphere mug in warm light",
     },
     {
-      src: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=80",
-      alt: "Studio microphone ready for a live conversation",
+      src: "/images/site/bookstack.webp",
+      alt: "Open book on a stack of books in warm light",
     },
     {
-      src: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80",
-      alt: "Camera prepared for an editorial shoot",
+      src: "/images/site/two-mics.webp",
+      alt: "Two microphones and armchairs in a podcast studio",
     },
     {
-      src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
-      alt: "Coffee beside a notebook",
+      src: "/images/site/book-coffee.webp",
+      alt: "Open book and coffee in warm light",
     },
     {
-      src: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=900&q=80",
-      alt: "Reading corner with warm storytelling atmosphere",
+      src: "/images/site/magic-book.webp",
+      alt: "Open book with floating story icons in warm light",
     },
   ],
 } as const;
@@ -394,7 +388,6 @@ export const aboutCta = {
     "Join the next live author spotlight and share your message with the world.",
   primaryCta: { label: "Share Your Story", href: "https://form.jotform.com/261917650330050" },
   secondaryCta: { label: "Contact Us", href: "/contact" },
-  image:
-    "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1000&q=80",
+  image: "/images/site/book-coffee.webp",
   imageAlt: "Open book and coffee in warm morning light",
 } as const;
