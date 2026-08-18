@@ -56,7 +56,7 @@ export const kateWashington: Conversation = {
     "Kate Washington is a writer and critic whose work explores caregiving, family, and the labor we don't see.",
   authorRole: "Featured Author",
   bookTitle: "Already Toast: Caregiving and Burnout in America",
-  bookCover: "/images/already-toast-cover.webp",
+  bookCover: "/images/already-toast-cover-mockup.jpg",
   conversationTitle: "A Conversation Worth Hearing",
   conversationDescription:
     "Kate Washington shares the personal story behind Already Toast, discussing caregiving, resilience, and the unseen challenges faced by millions of family caregivers.",
