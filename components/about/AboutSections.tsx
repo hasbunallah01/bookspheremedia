@@ -178,7 +178,7 @@ export function Journey() {
 export function AuthorChecklist() {
   return (
     <section className="section bg-ivory">
-      <div className="container-wide grid items-center gap-10 md:grid-cols-2 lg:gap-16">
+      <div className="container-wide grid items-center gap-10 md:grid-cols-1 lg:gap-16">
         <div>
           <BadgeEyebrow
             badge={authorChecklist.badge}
@@ -210,22 +210,6 @@ export function AuthorChecklist() {
             ))}
           </div>
         </div>
-        <motion.div
-          initial={{ opacity: 0, x: 24 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="relative aspect-[4/5] max-h-[560px] w-full overflow-hidden rounded-xl shadow-card"
-        >
-          <Image
-            src={authorChecklist.image}
-            alt={authorChecklist.imageAlt}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-            loading="lazy"
-          />
-        </motion.div>
       </div>
     </section>
   );

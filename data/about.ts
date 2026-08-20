@@ -233,8 +233,8 @@ export const authorChecklist = {
     "Willingness to participate",
     "Positive collaboration",
   ],
-  image: "/images/site/magic-book.webp",
-  imageAlt: "Open book with floating story icons in warm light",
+  image: "",
+  imageAlt: "",
 } as const;
 
 export const editorialStandards = {
