@@ -23,7 +23,7 @@ import {
 export function AboutHero() {
   return (
     <section className="bg-ivory pb-16 pt-28 md:pb-24 md:pt-36">
-      <div className="container-wide grid items-center gap-12 px-6 md:grid-cols-2 md:px-10">
+      <div className="container-wide grid items-center gap-12 px-6 md:grid-cols-1 md:px-10">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -64,22 +64,6 @@ export function AboutHero() {
             </Link>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.97 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-card"
-        >
-          <Image
-            src={aboutHero.image}
-            alt={aboutHero.imageAlt}
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-          />
-        </motion.div>
       </div>
     </section>
   );

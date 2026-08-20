@@ -9,7 +9,6 @@ import {
   Journey,
   AuthorChecklist,
   EditorialStandards,
-  SpotlightGallery,
   AboutCTA,
 } from "@/components/about/AboutSections";
 import { FAQPreview } from "@/components/home/FAQPreview";
@@ -67,9 +66,6 @@ export default function AboutPage() {
 
       {/* 13. FAQ — same accordion as homepage */}
       <FAQPreview />
-
-      {/* 14. Behind the Spotlight */}
-      <SpotlightGallery />
 
       {/* 15. Why Authors Choose Booksphere Media */}
       <ValueGrid {...whyChooseUs} columns={3} background="ivory" />

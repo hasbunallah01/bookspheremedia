@@ -23,8 +23,8 @@ export const ourStory = {
     "We saw how many powerful stories remained unheard because authors didn't have the right platform. So we built a space where conversations matter, voices are amplified, and stories create real impact.",
     "We are more than a platform. We are a movement of storytellers, readers, and dreamers who believe in the power of words.",
   ],
-  image: "/images/site/bookstack.webp",
-  imageAlt: "Open book on a stack of books in warm light",
+  image: "",
+  imageAlt: "",
 } as const;
 
 export const whoWeAre = {
@@ -36,8 +36,8 @@ export const whoWeAre = {
     "We are active, intentional, and deeply invested in the authors we feature. When you join Booksphere, our team works to present you to our audience in the most authentic and impactful way possible.",
     "Our community is growing, our conversations are real, and our commitment to amplifying author voices has never been stronger.",
   ],
-  image: "/images/site/magic-book.webp",
-  imageAlt: "Open book with floating story icons in warm light",
+  image: "",
+  imageAlt: "",
 } as const;
 
 export const whatWeBelieve = {

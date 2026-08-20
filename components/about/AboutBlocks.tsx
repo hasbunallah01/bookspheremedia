@@ -130,30 +130,33 @@ export function EditorialSplit({
   imageSide?: "left" | "right";
   background?: "white" | "ivory";
 }) {
+  const hasImage = image.length > 0;
   return (
     <section className={cn("section", background === "white" ? "bg-surface" : "bg-ivory")}>
-      <div className="container-wide grid items-center gap-10 md:grid-cols-2 lg:gap-16">
-        <motion.div
-          initial={{ opacity: 0, x: imageSide === "left" ? -24 : 24 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className={cn(
-            "relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-card",
-            imageSide === "right" && "md:order-2",
-          )}
-        >
-          <Image
-            src={image}
-            alt={imageAlt}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-            loading="lazy"
-          />
-        </motion.div>
+      <div className={cn("container-wide grid items-center gap-10 lg:gap-16", hasImage ? "md:grid-cols-2" : "md:grid-cols-1")}>
+        {hasImage && (
+          <motion.div
+            initial={{ opacity: 0, x: imageSide === "left" ? -24 : 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className={cn(
+              "relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-card",
+              imageSide === "right" && "md:order-2",
+            )}
+          >
+            <Image
+              src={image}
+              alt={imageAlt}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              loading="lazy"
+            />
+          </motion.div>
+        )}
 
-        <div className={cn(imageSide === "right" && "md:order-1")}>
+        <div className={cn(hasImage && imageSide === "right" && "md:order-1")}>
           <BadgeEyebrow badge={badge} eyebrow={eyebrow} align="left" />
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
