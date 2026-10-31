@@ -557,3 +557,9 @@ body:not(:has(.jhero,.phead)) .nav:not(.isopen) .logo-n .lg-l{opacity:0}
 body:not(:has(.jhero,.phead)) .nav:not(.isopen) .logo-n .lg-d{opacity:1}
 .logo-f img{display:block;height:auto;width:250px;opacity:.95}.logo-x img{display:block;height:48px;width:auto}
 @media(max-width:1060px){.logo-n img{height:36px}}
+/* refined founder portraits */
+.portrait{width:100%;max-width:340px!important;box-shadow:0 30px 60px -30px rgba(23,20,14,.45)}
+.fhead{padding-top:24px;grid-template-columns:340px 1fr;gap:72px}.founder{grid-template-columns:340px 1fr;gap:72px}.hm-fg{grid-template-columns:340px 1fr;gap:96px}
+@media(max-width:1060px){.fhead,.founder,.hm-fg{grid-template-columns:1fr;gap:40px}.portrait{max-width:300px!important}}
+@media(max-width:700px){.portrait{max-width:min(236px,60vw)!important;margin-left:auto!important;margin-right:auto!important;box-shadow:0 22px 44px -24px rgba(23,20,14,.45)}
+.fhead{padding-top:8px;gap:30px}.hm-fg,.founder{gap:34px}}
