@@ -18,11 +18,12 @@ def svg(size=512, fill=0.86, radius=0.22, bstroke=3.2, pstroke=3.4, bg=True, sim
             f'<g transform="translate({size/2} {size/2}) scale({s:.4f}) translate({-CX} {-CY})">{m}</g></svg>')
 def render(t,px):
     im=Image.open(io.BytesIO(cairosvg.svg2png(bytestring=t.encode(),output_width=px,output_height=px))).convert("RGBA"); im.info={}; return im
-app=f"{ROOT}/app"; main=svg()
-open(f"{app}/icon.svg","w").write(main)
-render(main,512).save(f"{app}/icon.png",optimize=True)
-render(svg(radius=0,fill=0.80),180).convert("RGB").save(f"{app}/apple-icon.png")   # iOS rounds corners itself
+app=f"{ROOT}/public/brand"; main=svg()
+open(f"{app}/icon-v3.svg","w").write(main)
+render(main,512).save(f"{app}/icon-v3.png",optimize=True)
+render(svg(radius=0,fill=0.80),180).convert("RGB").save(f"{app}/apple-icon-v3.png")   # iOS rounds corners itself
 render(main,192).save(f"{ROOT}/public/brand/icon-192.png"); render(main,512).save(f"{ROOT}/public/brand/icon-512.png")
 small=svg(fill=0.92,radius=0.18,bstroke=5,pstroke=7,simple=True)   # 16/32: bigger mark, heavier B outline, lighter page lines so the fan reads white
 ico=[render(small,16),render(small,32),render(svg(fill=0.90,pstroke=2.8),48)]
-ico[2].save(f"{app}/favicon.ico",format="ICO",sizes=[(16,16),(32,32),(48,48)],append_images=ico[:2])
+ico[2].save(f"{app}/favicon-v3.ico",format="ICO",sizes=[(16,16),(32,32),(48,48)],append_images=ico[:2])
+import shutil; shutil.copy(f"{app}/favicon-v3.ico",f"{ROOT}/public/favicon.ico"); shutil.copy(f"{app}/apple-icon-v3.png",f"{ROOT}/public/apple-touch-icon.png")
