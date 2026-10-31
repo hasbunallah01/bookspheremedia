@@ -1,0 +1,10 @@
+.env*
+.env.local
+node_modules
+.next
+shots
+incoming
+storage
+tsconfig.tsbuildinfo
+prisma/*.bak-*
+prisma/dev.db

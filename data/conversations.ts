@@ -30,13 +30,13 @@ export interface Conversation {
 export const terriGivens: Conversation = {
   id: "terri-givens-radical-empathy",
   authorName: "Terri E. Givens",
-  authorPhoto: "/images/terri-givens.webp",
+  authorPhoto: "/media/terri-givens.webp",
   authorSlug: "terri-givens",
   authorBio:
     "Terri E. Givens is a political scientist and author writing on empathy, justice, and bridging social divides.",
   authorRole: "Featured Author",
   bookTitle: "Radical Empathy: Finding a Path to Bridging Racial Divides",
-  bookCover: "/images/radical-empathy-cover.webp",
+  bookCover: "/media/radical-empathy-cover.webp",
   conversationTitle: "A Conversation on Empathy, Justice & Building Bridges",
   conversationDescription:
     "Join Terri E. Givens as she discusses the inspiration behind Radical Empathy, exploring how understanding others, confronting bias, and embracing empathy can help bridge social and racial divides.",
@@ -50,13 +50,13 @@ export const terriGivens: Conversation = {
 export const kateWashington: Conversation = {
   id: "kate-washington-already-toast",
   authorName: "Kate Washington",
-  authorPhoto: "/images/kate-washington-monogram.png",
+  authorPhoto: "/media/kate-washington-monogram.png",
   authorSlug: "kate-washington",
   authorBio:
     "Kate Washington is a writer and critic whose work explores caregiving, family, and the labor we don't see.",
   authorRole: "Featured Author",
   bookTitle: "Already Toast: Caregiving and Burnout in America",
-  bookCover: "/images/already-toast-cover-mockup.jpg",
+  bookCover: "/media/already-toast-cover-mockup.jpg",
   conversationTitle: "A Conversation Worth Hearing",
   conversationDescription:
     "Kate Washington shares the personal story behind Already Toast, discussing caregiving, resilience, and the unseen challenges faced by millions of family caregivers.",
@@ -82,13 +82,13 @@ export const featuredConversation: Conversation = kateWashington;
 export const andrewChild: Conversation = {
   id: "andrew-child-the-sentinel",
   authorName: "Andrew Child",
-  authorPhoto: "/images/andrew-child.webp",
+  authorPhoto: "/media/andrew-child.webp",
   authorSlug: "andrew-child",
   authorBio:
     "Andrew Child is a bestselling thriller writer and co-author of the Jack Reacher series alongside Lee Child.",
   authorRole: "Interview Guest",
   bookTitle: "The Sentinel: A Jack Reacher Novel",
-  bookCover: "/images/the-sentinel-cover.webp",
+  bookCover: "/media/the-sentinel-cover.webp",
   conversationTitle: "A Conversation Worth Hearing",
   conversationDescription:
     "Andrew Child discusses The Sentinel, co-written with Lee Child, sharing insights into continuing the iconic Jack Reacher series, the writing process, and bringing one of thriller fiction's most enduring characters to a new generation.",
@@ -106,13 +106,13 @@ export const andrewChild: Conversation = {
 export const abigailDillen: Conversation = {
   id: "abigail-dillen-all-we-can-save",
   authorName: "Abigail Dillen",
-  authorPhoto: "/images/abigail-dillen-monogram.png",
+  authorPhoto: "/media/abigail-dillen-monogram.png",
   authorSlug: "abigail-dillen",
   authorBio:
     "Abigail Dillen is the President of Earthjustice and an environmental lawyer. She is a featured contributor to the climate anthology All We Can Save, edited by Katharine K. Wilkinson & Ayana Elizabeth Johnson.",
   authorRole: "Featured Contributor",
   bookTitle: "All We Can Save: Truth, Courage, and Solutions for the Climate Crisis",
-  bookCover: "/images/all-we-can-save-cover.webp",
+  bookCover: "/media/all-we-can-save-cover.webp",
   conversationTitle:
     "Featured in All We Can Save: Truth, Courage, and Solutions for the Climate Crisis",
   conversationDescription:

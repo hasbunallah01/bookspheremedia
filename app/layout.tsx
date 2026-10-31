@@ -1,69 +1,31 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { EB_Garamond, Karla } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { ScrollProgress } from "@/components/layout/ScrollProgress";
-import { site } from "@/data/site";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Reveal } from "@/components/Reveal";
+import { SITE_URL } from "@/lib/content";
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-cormorant",
-  display: "swap",
-});
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dmsans",
-  display: "swap",
-});
+const serif = EB_Garamond({ subsets: ["latin"], weight: ["400", "500"], style: ["normal", "italic"], variable: "--font-garamond" });
+const sans = Karla({ subsets: ["latin"], weight: ["300", "400", "500", "600"], variable: "--font-karla" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
-  title: {
-    default: `${site.name} — ${site.tagline}`,
-    template: `%s | ${site.name}`,
-  },
-  description: site.description,
-  keywords: [
-    "literary media",
-    "author interviews",
-    "book features",
-    "storytellers",
-    "Booksphere",
-    "publishing",
-  ],
-  authors: [{ name: site.name }],
-  creator: site.name,
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: site.url,
-    title: `${site.name} — ${site.tagline}`,
-    description: site.description,
-    siteName: site.name,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${site.name} — ${site.tagline}`,
-    description: site.description,
-  },
-  robots: { index: true, follow: true },
+  metadataBase: new URL(SITE_URL),
+  title: { default: "Book Sphere | Discover Books, Authors & Literary Stories", template: "%s | Book Sphere" },
+  description: "Explore Book Sphere, a literary community where readers discover books, authors share their stories, and new literary connections begin.",
+  openGraph: { siteName: "Book Sphere", type: "website", images: ["/img/hero.jpg"] },
+  twitter: { card: "summary_large_image" },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${cormorant.variable}`}>
-      <body className="min-h-screen overflow-x-hidden">
-        <ScrollProgress />
-        <Navbar />
-        <main className="relative">{children}</main>
+    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+      <body>
+        <a className="skip" href="#main">Skip to content</a>
+        <Header />
+        <main id="main">{children}</main>
         <Footer />
+        <Reveal />
       </body>
     </html>
   );
