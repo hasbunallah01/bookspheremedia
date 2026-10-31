@@ -50,8 +50,8 @@ const sections: LegalSection[] = [
     </ul>
     <p>These providers may process information in countries other than your own. We may also disclose information if required by law. We do not otherwise share your information with third parties.</p>
   </> },
-  { id: "third-party-links", title: "External and affiliate links", body: <>
-    <p>Book pages, spotlights and affiliate community pages link to other websites, such as Amazon, publishers, authors&rsquo; sites and Facebook groups. Some purchase links may be affiliate links. When you follow a link, you leave Book Sphere, and the other site&rsquo;s own privacy policy applies.</p>
+  { id: "third-party-links", title: "External links", body: <>
+    <p>Book pages, spotlights and affiliate community pages link to other websites, such as Amazon, publishers, authors&rsquo; sites and Facebook groups. Purchase links go to third-party stores, whose own terms and policies apply. When you follow a link, you leave Book Sphere, and the other site&rsquo;s own privacy policy applies.</p>
   </> },
   { id: "cookies", title: "Cookies and tracking", body: <>
     <p>The public website does not use analytics, advertising or tracking cookies. The only cookie we set is a strictly necessary session cookie when a Book Sphere team member signs in to the admin area. Embedded content or the external sites you visit from our links may set their own cookies.</p>
