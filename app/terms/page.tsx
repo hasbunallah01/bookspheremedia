@@ -1,15 +1,32 @@
 import Link from "next/link";
-import { Crumbs } from "@/components/Cards";
-import { termsHero, termsSections, termsCta } from "@/data/legal-terms";
-export const metadata = { title: "Terms & Conditions", description: "The responsibilities, expectations, and agreements that apply when using Book Sphere.", alternates: { canonical: "/terms" } };
+import { LegalDoc, Mail, type LegalSection } from "@/components/LegalDoc";
+export const metadata = { title: "Terms & Conditions", description: "The terms that apply when you use the Book Sphere website, submit a book or apply as an affiliate community.", alternates: { canonical: "/terms" } };
+
+const sections: LegalSection[] = [
+  { id: "acceptance", title: "Acceptance of terms", body: <p>These Terms &amp; Conditions apply to your use of the Book Sphere website. By using the website, submitting a form or joining our newsletter, you agree to these terms and to our <Link href="/privacy" style={{ borderBottom: "1px solid" }}>Privacy Policy</Link>. If you do not agree, please do not use the website.</p> },
+  { id: "about", title: "About Book Sphere", body: <p>Book Sphere is a literary community and book club that helps readers discover books and authors. The website features book listings, author profiles, author spotlights, recorded conversations with authors, and affiliate reading communities. Book Sphere does not sell books directly.</p> },
+  { id: "using-the-site", title: "Using the website", body: <p>The website is free to browse. Book descriptions, author information and spotlights are provided for general information. We aim to keep them accurate, but details such as prices, editions and availability are set by the retailer or publisher and may change.</p> },
+  { id: "submissions", title: "Book and author submissions", body: <>
+    <p>When you submit a book, you confirm that you are the author or are authorised to submit it, that the information you provide is accurate, and that you have the right to share the cover image, biography and other material you upload.</p>
+    <p>You keep full ownership of your work. By submitting, you give Book Sphere permission to display the submitted details, cover and links on the website and in related Book Sphere promotion if your submission is approved. You can ask us to update or remove a listing at any time.</p>
+    <p>Every submission is reviewed by a person. Submitting does not guarantee publication, a spotlight, a conversation or any other feature, and we may decline any submission.</p>
+  </> },
+  { id: "affiliate-communities", title: "Affiliate communities", body: <p>If you apply to list your reading community, you confirm that you run or represent it and that the details and logo you share are accurate and yours to share. Approved communities are shown on our website with a link to their page. Affiliate communities are independent: they set their own rules, and Book Sphere is not responsible for their content or activities. We may update or remove a listing at any time.</p> },
+  { id: "conversations-spotlights", title: "Spotlights and conversations", body: <p>Author spotlights and recorded conversations are published with the participating author&rsquo;s involvement. The views expressed in them belong to the authors and do not necessarily reflect the views of Book Sphere.</p> },
+  { id: "external-links", title: "Purchase and external links", body: <p>Some pages link to other websites, such as Amazon, publishers, authors&rsquo; sites and social media. Some purchase links may be affiliate links, which means Book Sphere may earn a small commission if you buy through them, at no extra cost to you. Any purchase is made with the retailer, under its own terms. We are not responsible for the content, products or policies of external websites.</p> },
+  { id: "newsletter", title: "Newsletter", body: <p>If you join our newsletter, we will send you occasional updates about books, authors and Book Sphere news. You can unsubscribe at any time using the link in every email.</p> },
+  { id: "content", title: "Our content and intellectual property", body: <p>The Book Sphere name, logo, website design and original text belong to Book Sphere. Book covers, author photos, excerpts and other material supplied by authors, publishers or communities remain the property of their owners and are used with permission. Please do not copy or reuse content from this website without permission, except for sharing links or brief quotations with credit.</p> },
+  { id: "acceptable-use", title: "Acceptable use", body: <p>Please do not misuse the website. This includes submitting false or misleading information, submitting work you do not have the rights to, sending spam, uploading harmful files, attempting to access the admin area or other parts of the site you are not authorised to use, or interfering with how the website works.</p> },
+  { id: "liability", title: "Liability and availability", body: <>
+    <p>We aim to keep the website accurate and available, but it is provided as it is, and we cannot promise it will always be uninterrupted or error free. Information on the website is general and may change.</p>
+    <p>To the extent permitted by law, Book Sphere is not responsible for indirect or consequential losses arising from your use of the website or of external websites we link to. Nothing in these terms limits any rights you have that cannot be limited by law.</p>
+  </> },
+  { id: "changes-contact", title: "Changes and contact", body: <>
+    <p>We may update these terms from time to time. The latest version will always be on this page, with its effective date at the top. Continued use of the website after a change means you accept the updated terms.</p>
+    <p>Questions about these terms? Email <Mail /> or use our <Link href="/contact" style={{ borderBottom: "1px solid" }}>contact page</Link>.</p>
+  </> },
+];
+
 export default function Page() {
-  return (<>
-    <header className="phead"><div className="wrap"><Crumbs items={[["Home", "/"], ["Terms & Conditions"]]} /><h1>{termsHero.title}</h1><p className="lead">{termsHero.description}</p></div></header>
-    <div className="wrap lg">
-      {termsSections.map((s) => (
-        <section key={s.number} className="lg-b rv"><p className="lg-n">{s.number}</p><div><h2>{s.title}</h2><p className="lg-p">{s.description.split(/(bookspheremedia26@gmail\.com)/).map((x, i) => x.includes("@") ? <a key={i} href={`mailto:${x}`}>{x}</a> : x)}</p>{s.points && <ul className="lg-pts">{s.points.map((p) => <li key={p}>{p}</li>)}</ul>}</div></section>
-      ))}
-      <div className="lg-cta rv"><h2>{termsCta.title}</h2><p>{termsCta.description}</p><Link className="btn" href={termsCta.cta.href}>{termsCta.cta.label}</Link></div>
-    </div>
-  </>);
+  return <LegalDoc crumb="Terms & Conditions" title={<>Terms &amp; <em>Conditions</em></>} intro="The terms that apply when you use Book Sphere, submit a book or list a reading community." sections={sections} other={{ label: "Privacy Policy", href: "/privacy" }} />;
 }

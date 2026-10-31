@@ -6,7 +6,7 @@ const cols: [string, [string, string][]][] = [
   ["Explore", [["/discover", "Discover Books"], ["/authors", "Authors"], ["/genres", "Genres"], ["/spotlights", "Spotlights"], ["/conversations", "Conversations"], ["/affiliates", "Affiliate Communities"]]],
   ["For Authors", [["/submit", "Submit a Book"], ["/submit#guidelines", "Submission Guidelines"], ["/join#authors", "Author Information"]]],
   ["About", [["/about", "About Book Sphere"], ["/founder", "Our Founder"], ["/contact", "Contact"], ["/faq", "Frequently Asked Questions"]]],
-  ["Legal", [["/privacy", "Privacy & Guidelines"], ["/terms", "Terms & Conditions"], ["/privacy#cookies", "Cookie Information"]]],
+  ["Legal", [["/privacy", "Privacy Policy"], ["/terms", "Terms & Conditions"], ["/privacy#cookies", "Cookie Information"]]],
 ];
 export function Footer() {
   return (
