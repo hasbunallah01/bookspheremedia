@@ -1,6 +1,7 @@
+import { seo } from "@/lib/seo";
 import { Crumbs } from "@/components/Cards";
 import { SubmitForm } from "@/components/SubmitForm";
-export const metadata = { title: "Submit a Book", description: "Introduce your book to Book Sphere for consideration.", alternates: { canonical: "/submit" } };
+export const metadata = seo("Submit a Book", "Submit your book to Book Sphere for consideration as a featured title, with author details, cover and purchase link.", "/submit");
 export default function Page() {
   return (<>
     <header className="phead"><div className="wrap"><Crumbs items={[["Home", "/"], ["Submit a Book"]]} /><h1>Introduce Your Book to Book Sphere</h1>

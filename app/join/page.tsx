@@ -1,9 +1,10 @@
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { Crumbs } from "@/components/Cards";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { newsletterEnabled } from "@/app/newsletter";
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Join the Community", description: "Find your place in the Book Sphere community as a reader or an author.", alternates: { canonical: "/join" } };
+export const metadata = seo("Join the Community", "Find your place in the Book Sphere community as a reader or an author.", "/join");
 export default async function Page() {
   const enabled = await newsletterEnabled();
   return (<>

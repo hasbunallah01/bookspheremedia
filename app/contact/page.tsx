@@ -1,7 +1,8 @@
+import { seo } from "@/lib/seo";
 import { Social } from "@/components/Social";
 import { Crumbs } from "@/components/Cards";
 import { ContactForm } from "@/components/ContactForm";
-export const metadata = { title: "Contact", description: "Get in touch with Book Sphere.", alternates: { canonical: "/contact" } };
+export const metadata = seo("Contact", "Contact Book Sphere about featuring your book, author spotlights, affiliate communities, press or partnerships. We read every message.", "/contact");
 export default function Page() {
   return (<>
     <header className="phead"><div className="wrap"><Crumbs items={[["Home", "/"], ["Contact"]]} /><h1>Let&apos;s Talk Books</h1><p className="lead">Have a question about Book Sphere, a book submission, an author feature, or a possible collaboration? We would be happy to hear from you.</p></div></header>

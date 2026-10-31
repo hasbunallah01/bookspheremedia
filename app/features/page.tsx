@@ -1,8 +1,9 @@
+import { seo } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { features } from "@/lib/content";
 import { Crumbs } from "@/components/Cards";
-export const metadata = { robots: { index: false }, title: "Author Features & Literary Stories", description: "Literary profiles, book spotlights and creative journeys on Book Sphere.", alternates: { canonical: "/features" } };
+export const metadata = seo("Author Features & Literary Stories", "Literary profiles, book spotlights and creative journeys on Book Sphere.", "/features", undefined, { robots: { index: false, follow: true } });
 export default function Page() {
   return (<>
     <header className="phead"><div className="wrap"><Crumbs items={[["Home", "/"], ["Author Features"]]} /><h1>Author Features &amp; Literary Stories</h1><p className="lead">Books tell stories, but authors have stories of their own. Explore literary profiles, book spotlights, interviews, and creative journeys that offer a closer look at the people and ideas behind the pages.</p></div></header>

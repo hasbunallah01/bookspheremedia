@@ -1,7 +1,8 @@
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { Crumbs, Portrait } from "@/components/Cards";
 import { SITE_URL } from "@/lib/content";
-export const metadata = { title: "Our Founder — Qudus Daramola Abolaji", description: "The story and vision behind Book Sphere, from its founder Qudus Daramola Abolaji.", alternates: { canonical: "/founder" } };
+export const metadata = seo("Our Founder — Qudus Daramola Abolaji", "The story and vision behind Book Sphere, from its founder Qudus Daramola Abolaji.", "/founder");
 const S: [string, string, string[]][] = [
   ["vision-built", "A Vision Built Around Books, People, and Possibilities", ["Book Sphere was founded by Qudus Daramola Abolaji with a vision of creating a literary community where authors and readers could come together through their shared appreciation for books and storytelling.", "At the heart of Book Sphere is a simple but meaningful belief: books are more than words printed on pages. They carry ideas, experiences, imagination, knowledge, and perspectives that have the power to connect people and inspire new ways of thinking.", "For many authors, introducing their work to new readers can be a challenge. At the same time, readers are continually searching for stories, authors, and ideas that speak to their interests and experiences.", "Book Sphere was envisioned as a place where these two needs could meet."]],
   ["vision", "The Vision Behind Book Sphere", ["The vision behind Book Sphere extends beyond simply bringing books together on a website. It is about creating an environment where literary discovery feels accessible, where authors have a place to present their work, and where readers are encouraged to remain curious.", "Every author has a story behind their work, and every reader has the potential to discover a book that changes how they think, feel, learn, or see the world.", "Book Sphere seeks to help make those connections possible."]],

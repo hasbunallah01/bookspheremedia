@@ -563,3 +563,6 @@ body:not(:has(.jhero,.phead)) .nav:not(.isopen) .logo-n .lg-d{opacity:1}
 @media(max-width:1060px){.fhead,.founder,.hm-fg{grid-template-columns:1fr;gap:40px}.portrait{max-width:300px!important}}
 @media(max-width:700px){.portrait{max-width:min(236px,60vw)!important;margin-left:auto!important;margin-right:auto!important;box-shadow:0 22px 44px -24px rgba(23,20,14,.45)}
 .fhead{padding-top:8px;gap:30px}.hm-fg,.founder{gap:34px}}
+/* legal docs: inner <section>s were inheriting the global 120px section padding */
+.lgdoc section{padding:0;margin:0 0 48px}.lgdoc section:last-child{margin-bottom:0}.lgdoc section h2{margin-top:0}
+@media(max-width:900px){.lgdoc section{margin-bottom:36px}}

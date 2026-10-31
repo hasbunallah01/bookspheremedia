@@ -1,7 +1,8 @@
+import { seo } from "@/lib/seo";
 import { AuthorsDir } from "@/components/AuthorsDir";
 import { getAuthors } from "@/lib/content";
 import { Crumbs } from "@/components/Cards";
-export const metadata = { title: "Meet the Authors", description: "Discover the people behind the pages on Book Sphere.", alternates: { canonical: "/authors" } };
+export const metadata = seo("Meet the Authors", "Meet the authors featured on Book Sphere: their stories, their journeys and the books they have written.", "/authors");
 export default async function Page() {
   const authors = await getAuthors();
   return (<>

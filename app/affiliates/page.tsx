@@ -1,8 +1,9 @@
+import { seo } from "@/lib/seo";
 /* eslint-disable @next/next/no-img-element */
 import { Crumbs } from "@/components/Cards";
 import { AffiliateApplyForm } from "@/components/AffiliateForm";
 import { getAffiliates } from "@/lib/affiliates";
-export const metadata = { title: "Our Affiliate Communities", description: "Reading communities that share Book Sphere's love of books, authors and stories.", alternates: { canonical: "/affiliates" } };
+export const metadata = seo("Our Affiliate Communities", "Reading communities that share Book Sphere's love of books, authors and stories.", "/affiliates");
 export default async function Page() {
   const affs = await getAffiliates();
   return (<>

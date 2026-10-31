@@ -1,3 +1,4 @@
+import { seo, abs, clip, JsonLd, crumbsLd } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBooks, getBook, getAuthor, genreSlug, SITE_URL } from "@/lib/content";
@@ -8,7 +9,7 @@ type P = { params: Promise<{ slug: string }> };
 export async function generateStaticParams() { return (await getBooks()).map((b) => ({ slug: b.slug })); }
 export async function generateMetadata({ params }: P) {
   const b = await getBook((await params).slug); if (!b) return {};
-  return { title: `${b.title} by ${b.authorName}`, description: b.hook, alternates: { canonical: `/books/${b.slug}` }, openGraph: { images: [b.cover] } };
+  return seo(`${b.title} by ${b.authorName}`, b.hook || b.description[0] || b.title, `/books/${b.slug}`, b.realCover ? abs(b.cover) : undefined);
 }
 export default async function Page({ params }: P) {
   const b = await getBook((await params).slug); if (!b) notFound();
@@ -16,7 +17,7 @@ export default async function Page({ params }: P) {
   const books = await getBooks();
   const related = books.filter((x) => x.slug !== b.slug && (x.genre === b.genre || x.authorSlug === b.authorSlug)).concat(books.filter((x) => x.slug !== b.slug)).filter((x, i, arr) => arr.indexOf(x) === i).slice(0, 4);
   const meta: [string, string | undefined][] = [["Genre", b.genre], ["Publisher", b.publisher], ["Published", b.published], ["Language", b.language], ["Format", b.format]];
-  const ld = { "@context": "https://schema.org", "@type": "Book", name: b.title, author: { "@type": "Person", name: a.name }, genre: b.genre, url: `${SITE_URL}/books/${b.slug}`, ...(b.publisher && { publisher: { "@type": "Organization", name: b.publisher } }), ...(b.format === "Paperback" && { bookFormat: "https://schema.org/Paperback" }), ...(b.realCover && { image: `${SITE_URL}${b.cover}` }) };
+  const ld = { "@context": "https://schema.org", "@type": "Book", name: b.title, ...(b.subtitle && { alternativeHeadline: b.subtitle }), description: clip(b.description.join(" ") || b.hook, 500), author: { "@type": "Person", name: a.name, url: `${SITE_URL}/authors/${a.slug}` }, ...(b.language && { inLanguage: b.language }), ...(b.published && { datePublished: b.published }), ...(b.externalUrl && { sameAs: [b.externalUrl] }), genre: b.genre, url: `${SITE_URL}/books/${b.slug}`, ...(b.publisher && { publisher: { "@type": "Organization", name: b.publisher } }), ...(b.format === "Paperback" && { bookFormat: "https://schema.org/Paperback" }), ...(b.realCover && { image: abs(b.cover) }) };
   return (
     <>
       <section style={{ paddingTop: 80 }}>
@@ -45,7 +46,7 @@ export default async function Page({ params }: P) {
         </div>
       </section>
       <section className="books related"><div className="wrap"><div className="inner"><div className="sh"><h2>Related Books</h2></div><div className="bgrid two-col">{related.map((x, i) => <BookCard key={x.slug} book={x} i={i} />)}</div></div></div></section>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
+      <JsonLd data={[ld, crumbsLd([["Home", "/"], ["Discover Books", "/discover"], [b.title, `/books/${b.slug}`]])]} />
     </>
   );
 }

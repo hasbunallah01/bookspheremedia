@@ -1,6 +1,7 @@
+import { seo } from "@/lib/seo";
 import { FAQ } from "@/data/faq";
 import { Crumbs } from "@/components/Cards";
-export const metadata = { title: "Frequently Asked Questions", description: "How Book Sphere works for readers and authors.", alternates: { canonical: "/faq" } };
+export const metadata = seo("Frequently Asked Questions", "Answers to common questions about Book Sphere for readers and authors: submitting a book, author features, spotlights and more.", "/faq");
 
 export default function Page() {
   const ld = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQ.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };

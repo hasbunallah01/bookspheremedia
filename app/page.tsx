@@ -1,3 +1,4 @@
+import { seo, JsonLd, ORG, WEBSITE } from "@/lib/seo";
 import { Accordion } from "@/components/Accordion";
 import { Parallax } from "@/components/Parallax";
 import { FAQ } from "@/data/faq";
@@ -10,7 +11,7 @@ import { Cover } from "@/components/Cover";
 import { Portrait } from "@/components/Cards";
 import { getAffiliates } from "@/lib/affiliates";
 
-export const metadata = { alternates: { canonical: "/" } };
+export const metadata = seo("Book Sphere | Discover Books, Authors & Literary Stories", "Explore Book Sphere, a literary community where readers discover books, authors share their stories, and new literary connections begin.", "/", undefined, { title: { absolute: "Book Sphere | Discover Books, Authors & Literary Stories" } });
 
 export default async function Home() {
   const [books, affs] = await Promise.all([getBooks(), getAffiliates()]);
@@ -21,6 +22,7 @@ export default async function Home() {
   const fc = conversations.map((c, i) => ({ c, i })).sort((x, y) => (y.c.publishDate ?? "").localeCompare(x.c.publishDate ?? "") || y.i - x.i)[0].c;
   return (
     <>
+      <JsonLd data={[ORG, WEBSITE]} />
       <header className="jhero">
         <div className="jph" aria-hidden="true" />
         <div className="jov" aria-hidden="true" />

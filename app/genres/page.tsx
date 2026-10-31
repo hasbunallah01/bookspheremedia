@@ -1,8 +1,9 @@
+import { seo } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { genres, getBooks } from "@/lib/content";
 import { Crumbs } from "@/components/Cards";
-export const metadata = { title: "Explore by Genre", description: "Browse Book Sphere by genre to find books that match your mood and interests.", alternates: { canonical: "/genres" } };
+export const metadata = seo("Explore by Genre", "Browse Book Sphere by genre to find books that match your mood and interests.", "/genres");
 export default async function Page() {
   const books = await getBooks();
   return (<>

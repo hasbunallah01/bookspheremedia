@@ -1,7 +1,8 @@
+import { seo } from "@/lib/seo";
 import { Discover } from "@/components/Discover";
 import { getBooks } from "@/lib/content";
 import { Crumbs } from "@/components/Cards";
-export const metadata = { title: "Discover Books", description: "Search and browse books on Book Sphere by title, author, genre or keyword.", alternates: { canonical: "/discover" } };
+export const metadata = seo("Discover Books", "Search and browse books on Book Sphere by title, author, genre or keyword.", "/discover");
 export default async function Page({ searchParams }: { searchParams: Promise<{ genre?: string; q?: string }> }) {
   const sp = await searchParams;
   const books = await getBooks();

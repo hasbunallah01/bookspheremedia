@@ -1,6 +1,7 @@
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { LegalDoc, Mail, type LegalSection } from "@/components/LegalDoc";
-export const metadata = { title: "Privacy Policy", description: "How Book Sphere collects, uses and protects the information you share through our forms and newsletter.", alternates: { canonical: "/privacy" } };
+export const metadata = seo("Privacy Policy", "How Book Sphere collects, uses and protects the information you share through our forms and newsletter.", "/privacy");
 
 const sections: LegalSection[] = [
   { id: "introduction", title: "Introduction", body: <>

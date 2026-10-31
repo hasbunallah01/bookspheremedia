@@ -1,6 +1,7 @@
+import { seo } from "@/lib/seo";
 import Link from "next/link";
 import { LegalDoc, Mail, type LegalSection } from "@/components/LegalDoc";
-export const metadata = { title: "Terms & Conditions", description: "The terms that apply when you use the Book Sphere website, submit a book or apply as an affiliate community.", alternates: { canonical: "/terms" } };
+export const metadata = seo("Terms & Conditions", "The terms that apply when you use the Book Sphere website, submit a book or apply as an affiliate community.", "/terms");
 
 const sections: LegalSection[] = [
   { id: "acceptance", title: "Acceptance of terms", body: <p>Book Sphere is operated by Book Sphere Media LLC (&ldquo;Book Sphere,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;). These Terms &amp; Conditions apply to your use of the Book Sphere website. By using the website, submitting a form or joining our newsletter, you agree to these terms and to our <Link href="/privacy" style={{ borderBottom: "1px solid" }}>Privacy Policy</Link>. If you do not agree, please do not use the website.</p> },

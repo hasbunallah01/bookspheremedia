@@ -1,7 +1,8 @@
+import { seo } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { Crumbs, Portrait } from "@/components/Cards";
-export const metadata = { title: "About Book Sphere", description: "Book Sphere brings books, authors and readers closer together.", alternates: { canonical: "/about" } };
+export const metadata = seo("About Book Sphere", "Book Sphere is a book club and literary platform from Book Sphere Media LLC that brings books, authors and readers closer together.", "/about");
 const VALUES = [["Discovery", "We help create opportunities for readers to discover books, authors, and ideas they might not encounter otherwise."], ["Connection", "We believe books can bring people together through shared experiences, conversations, and perspectives."], ["Appreciation", "Every book represents creativity, effort, and a story worth approaching with curiosity and respect."], ["Community", "We aim to create a welcoming environment for readers and authors at different stages of their literary journeys."], ["Curiosity", "We encourage readers to explore new genres, voices, ideas, and perspectives."], ["Visibility", "We want to help authors introduce their work to readers who may appreciate what they have created."]];
 const ROMAN = ["i.", "ii.", "iii.", "iv.", "v.", "vi."];
 export default function Page() {
