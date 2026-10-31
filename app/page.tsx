@@ -1,3 +1,7 @@
+import { Accordion } from "@/components/Accordion";
+import { Parallax } from "@/components/Parallax";
+import { FAQ } from "@/data/faq";
+import { spotlights } from "@/data/spotlights";
 import { AudioPlayer } from "@/components/AudioPlayer";
 import { conversations } from "@/data/conversations";
 import Link from "next/link";
@@ -12,6 +16,8 @@ export default async function Home() {
   const [books, affs] = await Promise.all([getBooks(), getAffiliates()]);
   // Featured selection is set by the site owner in /admin; falls back to the first title with a real cover.
   const featured = (await getFeatured()) ?? books.find((b) => b.realCover) ?? books[0];
+  const sp = spotlights.find((x) => x.fullDescription && !x.hideFromHomepage) ?? spotlights[0];
+  const faq = FAQ.filter(([q]) => /submit my book|guarantee that|unpublished|request an author feature|sell books/.test(q));
   const fc = conversations.map((c, i) => ({ c, i })).sort((x, y) => (y.c.publishDate ?? "").localeCompare(x.c.publishDate ?? "") || y.i - x.i)[0].c;
   return (
     <>
@@ -25,18 +31,37 @@ export default async function Home() {
           <div className="btns"><Link className="btn" href="/discover">Discover books</Link><Link className="btn alt" href="/authors">Meet the authors</Link></div>
         </div>
         <p className="jfd wrap">Founded by Qudus Daramola Abolaji</p>
-        <span className="jscroll" aria-hidden="true" />
+        <span className="jscroll" aria-hidden="true" /><Parallax />
       </header>
 
       <section className="hm-mission">
         <div className="wrap">
           <p className="eb rv">Why Book Sphere</p>
           <p className="hm-statement rv">Book Sphere brings readers and authors closer together, so that more books find their readers, more authors share their stories, and more people discover <em>the value of a good book.</em></p>
-          <ol className="hm-ways">
-            <li className="rv"><span className="hm-n">01</span><h3>Explore</h3><p>Browse books, discover authors, and explore genres that match your interests.</p><Link className="tl" href="/discover">Browse books</Link></li>
-            <li className="rv"><span className="hm-n">02</span><h3>Connect</h3><p>Learn about the people behind the books: their stories, backgrounds, and work.</p><Link className="tl" href="/authors">Meet the authors</Link></li>
-            <li className="rv"><span className="hm-n">03</span><h3>Discover more</h3><p>Follow your curiosity to new titles, fresh perspectives, and stories worth sharing.</p><Link className="tl" href="/genres">Explore genres</Link></li>
+        </div>
+      </section>
+
+      <section className="hiw" aria-labelledby="hwh">
+        <div className="wrap">
+          <div className="hw-h rv"><p className="eb">How Book Sphere works</p><h2 id="hwh">From your manuscript to <em>a reader&apos;s hands.</em></h2><p>A simple, personal process. Every book is read and reviewed by people before it appears on Book Sphere.</p></div>
+          <ol className="hw-l">
+            <li className="rv"><span className="hw-n">01</span><div><h3>Submit your book</h3><p>Share your book&apos;s details, cover and a short author biography through our submission form. You choose what we may publish.</p><Link className="tl" href="/submit">Submit a book</Link></div></li>
+            <li className="rv"><span className="hw-n">02</span><div><h3>Our team reviews it</h3><p>Every submission is read and reviewed by our team before anything goes live. Selection is based on quality and authenticity.</p><Link className="tl" href="/submit#guidelines">Submission guidelines</Link></div></li>
+            <li className="rv"><span className="hw-n">03</span><div><h3>Get featured</h3><p>Selected books receive a listing and author page. Some authors are invited to a featured spotlight or a recorded audio conversation.</p><Link className="tl" href="/spotlights">See spotlights</Link></div></li>
+            <li className="rv"><span className="hw-n">04</span><div><h3>Readers discover it</h3><p>Readers find your book by title, genre or author, listen to conversations, and explore the reading communities we grow alongside.</p><Link className="tl" href="/discover">Discover books</Link></div></li>
           </ol>
+        </div>
+      </section>
+
+      <section className="of" aria-labelledby="ofh">
+        <div className="wrap">
+          <div className="hw-h rv"><p className="eb">What we offer</p><h2 id="ofh">Four ways a book <em>finds its readers.</em></h2></div>
+          <div className="of-g">
+            <Link href="/discover" className="of-c rv"><span className="of-i" aria-hidden="true">i</span><h3>Book listings</h3><p>Every approved title gets its own page with the cover, a description, genre and the author behind it, so readers can search and browse with ease.</p><span className="tl">Browse books</span></Link>
+            <Link href="/spotlights" className="of-c rv"><span className="of-i" aria-hidden="true">ii</span><h3>Author spotlights</h3><p>In-depth profiles of featured authors: the story of the book, a passage worth remembering, and a closer look at the writer.</p><span className="tl">Read spotlights</span></Link>
+            <Link href="/conversations" className="of-c rv"><span className="of-i" aria-hidden="true">iii</span><h3>Live conversations</h3><p>Recorded audio interviews where authors talk about the ideas, research and lived experience behind their books.</p><span className="tl">Listen now</span></Link>
+            <Link href="/affiliates" className="of-c rv"><span className="of-i" aria-hidden="true">iv</span><h3>Affiliate communities</h3><p>Reading circles and literary communities we grow alongside, each celebrating books and bringing readers together.</p><span className="tl">Meet the communities</span></Link>
+          </div>
         </div>
       </section>
 
@@ -65,6 +90,20 @@ export default async function Home() {
         </div>
       </section>}
 
+      <section className="hs" aria-labelledby="hsh">
+        <div className="wrap hs-g">
+          <div className="hs-v rv">{/* eslint-disable-next-line @next/next/no-img-element */}<img className="hs-ban" src={sp.banner} alt={sp.bannerAlt} loading="lazy" />{/* eslint-disable-next-line @next/next/no-img-element */}<img className="hs-cov" src={sp.bookCover} alt={`Cover of ${sp.bookTitle}`} loading="lazy" /></div>
+          <div className="rv">
+            <p className="eb">Featured spotlight</p>
+            <h2 id="hsh">{sp.bookTitle}</h2>
+            <p className="hs-by">{/* eslint-disable-next-line @next/next/no-img-element */}<img src={sp.authorPhoto} alt="" width={36} height={36} />{sp.authorName} <span>·</span> {sp.genres[0]}</p>
+            <p className="hs-t">{sp.tagline}</p>
+            <p className="hm-ft">{sp.description}</p>
+            <div className="btns"><Link className="btn" href="/spotlights">Read the spotlight</Link><Link className="tl" href="/spotlights">All spotlights</Link></div>
+          </div>
+        </div>
+      </section>
+
       <section className="hm-conv" aria-labelledby="cvh">
         <div className="wrap hm-cvg">
           <div className="hm-cvc rv"><img src={fc.bookCover} alt={`Cover of ${fc.bookTitle}`} loading="lazy" /></div>
@@ -75,6 +114,13 @@ export default async function Home() {
             <AudioPlayer dark src={fc.audioUrl} title={`conversation with ${fc.authorName}`} />
             <Link className="tl" href="/conversations">All conversations</Link>
           </div>
+        </div>
+      </section>
+
+      <section className="rda">
+        <div className="wrap ar-g">
+          <div className="ar-c rv"><p className="eb">For authors</p><h2>Introduce your book <em>to readers who care.</em></h2><ul><li>Submit your book with your own cover, biography and links.</li><li>A real person reviews every submission before anything goes live.</li><li>You keep full ownership of your work, always.</li><li>Selected authors may be invited to a spotlight or a recorded conversation.</li></ul><Link className="tl" href="/submit">Submit your book</Link></div>
+          <div className="ar-c rv"><p className="eb">For readers</p><h2>Find your next book <em>with less noise.</em></h2><ul><li>Search by title, author, genre or keyword.</li><li>Meet the people behind the books on their author pages.</li><li>Listen to authors talk about their work in their own words.</li><li>Explore the reading communities we grow alongside.</li></ul><Link className="tl" href="/discover">Start exploring</Link></div>
         </div>
       </section>
 
@@ -91,15 +137,17 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="hm-close">
+      <section className="hf" aria-labelledby="hfh">
+        <div className="wrap hf-g">
+          <div className="hw-h rv"><p className="eb">Questions</p><h2 id="hfh">Good to know <em>before you submit.</em></h2><p>Honest answers about submitting and being featured.</p><Link className="tl" href="/faq">All questions</Link></div>
+          <Accordion items={faq} />
+        </div>
+      </section>
+
+      <section className="hm-close hm-close1">
         <div className="wrap hm-cg">
           <div className="rv"><p className="eb">For authors</p><h2>Your book deserves <em>to be discovered.</em></h2><p className="hm-ft">Whether you are publishing your first book or adding to an established body of work, we welcome you to introduce your book to our literary community.</p>
             <div className="btns"><Link className="btn" href="/submit">Submit your book</Link><Link className="tl" href="/join">Explore the community</Link></div></div>
-          <ol className="hm-steps rv">
-            <li><span>i.</span><div><h3>Prepare your book information</h3><p>Your book&apos;s details, cover and a short author biography.</p></div></li>
-            <li><span>ii.</span><div><h3>Submit for consideration</h3><p>Send it through our simple submission form.</p></div></li>
-            <li><span>iii.</span><div><h3>Receive confirmation</h3><p>Our team reviews every submission before anything is published.</p></div></li>
-          </ol>
         </div>
       </section>
     </>
