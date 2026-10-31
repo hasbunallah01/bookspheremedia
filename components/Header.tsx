@@ -8,6 +8,8 @@ const MNAV = [["/", "Home"], ...NAV] as const;
 const isOn = (path: string, h: string) => h === "/" ? path === "/" : path === h || path.startsWith(h + "/") || (h === "/discover" && path.startsWith("/books"));
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [scr, setScr] = useState(false);
+  useEffect(() => { const f = () => setScr(scrollY > 40); f(); addEventListener("scroll", f, { passive: true }); return () => removeEventListener("scroll", f); }, []);
   const path = usePathname();
   useEffect(() => setOpen(false), [path]);
   useEffect(() => { const k = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false); addEventListener("keydown", k); return () => removeEventListener("keydown", k); }, []);
@@ -19,7 +21,7 @@ export function Header() {
   return (
     <>
       <div className="ann">A community for readers, authors, and the stories that bring us together.</div>
-      <header className={`nav${path === "/" ? " over" : ""}${open ? " isopen" : ""}`}>
+      <header className={`nav${scr && !open ? " scr" : ""}${open ? " isopen" : ""}`}>
         <div className="wrap ni">
           <Logo />
           <button className="burger" aria-expanded={open} aria-controls="mmenu" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}><span /><span /></button>
