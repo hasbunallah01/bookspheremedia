@@ -26,5 +26,5 @@ export function Crumbs({ items }: { items: [string, string?][] }) {
 }
 export function Portrait() {
   // eslint-disable-next-line @next/next/no-img-element
-  return <figure className="portrait photo"><img src="/founder/qudus.jpg" alt="Qudus Daramola Abolaji, founder of Book Sphere" /></figure>;
+  return <figure className="portrait photo"><picture><source type="image/webp" srcSet="/founder/qudus.webp 480w, /founder/qudus@2x.webp 960w" sizes="(max-width: 700px) 90vw, 440px" /><img src="/founder/qudus.jpg" width={960} height={1243} alt="Qudus Daramola Abolaji, founder of Book Sphere" /></picture></figure>;
 }
