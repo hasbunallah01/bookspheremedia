@@ -1,5 +1,4 @@
 import type { Book } from "./types";
-// DEMO CONTENT: fictional sample books with illustrative covers. Not real published titles.
 const d = (t: string) => [t, "This is demonstration content. The full approved description supplied by the author or publisher will appear here."];
 export const books: Book[] = [
   // REAL RECORD supplied by the owner.
@@ -191,12 +190,4 @@ export const books: Book[] = [
     addedAt: "2026-10-29",
     demo: false,
   },
-  { slug: "the-salt-orchard", title: "The Salt Orchard", authorSlug: "mara-ellison", genre: "Literary Fiction", hook: "A family's last summer on a disappearing coast.", description: d("A quiet, layered novel about one family's final summer in a coastal town slowly giving way to the sea."), cover: "/img/grass.jpg", tone: "oxblood", language: "English", format: "Paperback", addedAt: "2026-10-20", demo: true },
-  { slug: "lanterns-of-vell", title: "Lanterns of Vell", authorSlug: "theo-ashcombe", genre: "Fantasy", hook: "A mapmaker charts a city that rewrites itself nightly.", description: d("A young mapmaker is hired to chart a city whose streets rearrange themselves every night."), cover: "/img/round.jpg", tone: "ink", addedAt: "2026-10-18", demo: true },
-  { slug: "the-quiet-hour", title: "The Quiet Hour", authorSlug: "june-okafor", genre: "Mystery & Thriller", hook: "One missing letter. Twelve sleepless nights.", description: d("When a single letter disappears from a sealed archive, an archivist begins to suspect the people she trusts most."), cover: "/img/dark.jpg", tone: "umber", addedAt: "2026-10-15", demo: true },
-  { slug: "letters-to-juniper", title: "Letters to Juniper", authorSlug: "clara-wren", genre: "Romance", hook: "Two strangers, one bookshop, a year of notes.", description: d("Two strangers leave notes for each other inside the same secondhand book for a year."), cover: "/img/coffee.jpg", tone: "oxblood", addedAt: "2026-10-12", demo: true },
-  { slug: "small-wonders", title: "Small Wonders", authorSlug: "ada-pemberton", genre: "Children's Books", hook: "A tiny fox learns the forest's biggest secret.", description: d("A gentle picture-book story about a small fox and a very big discovery."), cover: "/img/leaf.jpg", tone: "umber", addedAt: "2026-10-10", demo: true },
-  { slug: "the-long-walk-home", title: "The Long Walk Home", authorSlug: "samuel-reyes", genre: "Nonfiction", hook: "What a thousand miles on foot teaches about belonging.", description: d("A reflective account of a long walk and what it reveals about home and belonging."), cover: "/img/stack.jpg", tone: "ink", addedAt: "2026-10-08", demo: true },
-  { slug: "paper-moons", title: "Paper Moons", authorSlug: "iris-hollander", genre: "Poetry", hook: "Poems for the hours between midnight and morning.", description: d("A collection of short poems written for the quiet hours of the night."), cover: "/img/note.jpg", tone: "ink", addedAt: "2026-10-05", demo: true },
-  { slug: "northern-light", title: "Northern Light", authorSlug: "elias-brandt", genre: "Fiction", hook: "A ferry captain's final crossing changes everything.", description: d("On the last crossing before retirement, a ferry captain meets a passenger who changes everything."), cover: "/img/library.jpg", tone: "oxblood", addedAt: "2026-10-01", demo: true },
 ];

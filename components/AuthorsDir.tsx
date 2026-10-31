@@ -16,7 +16,7 @@ export function AuthorsDir({ authors }: { authors: Author[] }) {
         <button className={!l ? "on" : ""} onClick={() => setL("")} style={{ width: "auto", padding: "0 10px", fontSize: 15 }}>All</button>
         {LETTERS.map((c) => <button key={c} className={l === c ? "on" : ""} disabled={!authors.some((a) => last(a.name)[0] === c)} aria-pressed={l === c} onClick={() => setL(c)}>{c}</button>)}
       </div>
-      <p className="count" aria-live="polite">{list.length} sample {list.length === 1 ? "author" : "authors"}</p>
+      <p className="count" aria-live="polite">{list.length} {list.length === 1 ? "author" : "authors"}</p>
       {list.length ? <div className="agrid">{list.map((a) => <AuthorCard key={a.slug} a={a} />)}</div> : <div className="empty"><h2>No authors found</h2><p>Try another name, genre or letter.</p></div>}
     </>
   );

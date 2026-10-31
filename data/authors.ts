@@ -1,5 +1,4 @@
 import type { Author } from "./types";
-// DEMO CONTENT: fictional sample authors. Replace with approved author records before launch.
 export const authors: Author[] = [
   // REAL RECORD supplied by the owner.
   { slug: "ben-lerner", name: "Ben Lerner", genres: ["Literary Fiction", "Poetry"], bio: "Ben Lerner is the author of four books of poetry (The Lichtenberg Figures, Angle of Yaw, Mean Free Path, and The Lights), four novels (Leaving the Atocha Station, 10:04, The Topeka School, and Transcription) and a work of criticism (The Hatred of Poetry). His collaborations with artists include Blossom (with Thomas Demand), Gold Custody (with Barbara Bloom), and The Snows of Venice (with Alexander Kluge). Lerner has been a finalist for the Pulitzer Prize, the National Book Award, and the National Book Critics Circle Award. He has received fellowships from the Fulbright, Guggenheim, and MacArthur Foundations. In 2011 he won the \"Preis der Stadt Münster für internationale Poesie\", making him the first American to receive this honor. Lerner teaches at Brooklyn College, where he was named a Distinguished Professor of English in 2016.", demo: false },
@@ -19,12 +18,4 @@ export const authors: Author[] = [
   { slug: "dan-michaelson", name: "Dan Michaelson", genres: ["Fiction", "Fantasy"], photo: "/authors/dan-michaelson.jpg", bio: "Dan Michaelson grew up reading loving dragons, magic, and all things fantasy. He's got dozens of stories in his head and now tries to get them out so others can read them.", demo: false },
   // REAL RECORD supplied by the owner.
   { slug: "sister-souljah", name: "Sister Souljah", genres: ["Fiction", "Urban Fiction"], photo: "/authors/sister-souljah.jpg", bio: "Sister Souljah is a successful political activist and educator of underclass youth. Her national bestseller The Coldest Winter Ever, considered the definitive novel of the hip-hop generation, marked her fiction debut; she is also the author of a memoir entitled No Disrespect. She lives in New York City with her husband and son.", demo: false },
-  { slug: "mara-ellison", name: "Mara Ellison", genres: ["Literary Fiction"], bio: "Sample author profile. This placeholder biography shows how an approved author introduction will appear once a genuine profile is supplied.", journey: "This optional section can describe what inspires the author's writing and their approach to storytelling, using only information the author provides.", demo: true },
-  { slug: "theo-ashcombe", name: "Theo Ashcombe", genres: ["Fantasy"], bio: "Sample author profile. A placeholder introduction for demonstration purposes only.", demo: true },
-  { slug: "june-okafor", name: "June Okafor", genres: ["Mystery & Thriller"], bio: "Sample author profile. A placeholder introduction for demonstration purposes only.", demo: true },
-  { slug: "clara-wren", name: "Clara Wren", genres: ["Romance"], bio: "Sample author profile. A placeholder introduction for demonstration purposes only.", demo: true },
-  { slug: "ada-pemberton", name: "Ada Pemberton", genres: ["Children's Books"], bio: "Sample author profile. A placeholder introduction for demonstration purposes only.", demo: true },
-  { slug: "samuel-reyes", name: "Samuel Reyes", genres: ["Nonfiction"], bio: "Sample author profile. A placeholder introduction for demonstration purposes only.", demo: true },
-  { slug: "iris-hollander", name: "Iris Hollander", genres: ["Poetry"], bio: "Sample author profile. A placeholder introduction for demonstration purposes only.", demo: true },
-  { slug: "elias-brandt", name: "Elias Brandt", genres: ["Fiction"], bio: "Sample author profile. A placeholder introduction for demonstration purposes only.", demo: true },
 ];
