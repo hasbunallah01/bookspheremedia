@@ -1,5 +1,6 @@
 "use server";
 import { prisma } from "@/lib/db";
+import { notify } from "@/lib/notify";
 import { savePrivateUpload, type ImageExt } from "@/lib/storage";
 
 export type FormState = { status: "idle" | "success" | "error"; message?: string; errors?: Record<string, string> };
@@ -54,7 +55,7 @@ export async function submitBook(_: FormState, f: FormData): Promise<FormState> 
     if (cover) {
       coverPath = await savePrivateUpload(cover.buf, cover.ext as ImageExt);
     }
-    await prisma.bookSubmission.create({ data: {
+    const rec = await prisma.bookSubmission.create({ data: {
       authorName: str(f, "authorName", 200), email, authorWebsite: opt(f, "authorWebsite"), profileLink: opt(f, "profileLink"), country: opt(f, "country", 100),
       authorBio: str(f, "authorBio"), bookTitle: str(f, "bookTitle", 300), subtitle: opt(f, "subtitle", 300), primaryGenre: str(f, "primaryGenre", 100), secondaryGenre: opt(f, "secondaryGenre", 100),
       description: str(f, "description", 8000), publicationDate: opt(f, "publicationDate", 40), publisher: opt(f, "publisher", 200), isbn: opt(f, "isbn", 40), language: opt(f, "language", 80), format: opt(f, "format", 80),
@@ -62,6 +63,7 @@ export async function submitBook(_: FormState, f: FormData): Promise<FormState> 
       isPublished: str(f, "isPublished") === "yes", expectedPubDate: opt(f, "expectedPubDate", 40), featureInterest: f.get("featureInterest") === "on",
       rightsConsent: true, promotionalConsent: f.get("promotionalConsent") === "on",
     } });
+    await notify(`New book submission: ${rec.bookTitle}`, email, { ...rec, coverPath: rec.coverPath ? "Uploaded (view in admin)" : null });
     return { status: "success" };
   } catch (err) {
     console.error("submitBook failed", err);
@@ -94,6 +96,7 @@ export async function applyAffiliate(_: FormState, f: FormData): Promise<FormSta
       logoPath = await savePrivateUpload(logo.buf, logo.ext as ImageExt);
     }
     await prisma.affiliateApplication.create({ data: { communityName, contactName, email, link, description, logoPath } });
+    await notify(`New affiliate application: ${communityName}`, email, { communityName, contactName, email, link, description, logo: logoPath ? "Uploaded (view in admin)" : null });
     return { status: "success" };
   } catch (err) {
     console.error("applyAffiliate failed", err);
@@ -114,6 +117,7 @@ export async function sendContact(_: FormState, f: FormData): Promise<FormState>
   if (limited("contact:" + email)) return { status: "error", message: "Too many messages in a short time. Please try again later." };
   try {
     await prisma.contactMessage.create({ data: { name, email, subject, message } });
+    await notify(`New contact message: ${subject}`, email, { name, email, subject, message });
     return { status: "success" };
   } catch (err) {
     console.error("sendContact failed", err);
