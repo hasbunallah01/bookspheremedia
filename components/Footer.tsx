@@ -17,7 +17,7 @@ export function Footer() {
           {cols.map(([h, ls]) => <div key={h}><h4>{h}</h4>{ls.map(([href, l]) => <Link key={l} href={href}>{l}</Link>)}</div>)}
         </div>
         <Social />
-        <p className="copy">© <Year /> Book Sphere. Photography via Unsplash.</p>
+        <p className="copy">© <Year /> Book Sphere Media LLC. Photography via Unsplash.</p>
       </div>
     </footer>
   );

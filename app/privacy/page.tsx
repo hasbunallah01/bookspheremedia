@@ -4,7 +4,7 @@ export const metadata = { title: "Privacy Policy", description: "How Book Sphere
 
 const sections: LegalSection[] = [
   { id: "introduction", title: "Introduction", body: <>
-    <p>Book Sphere (&ldquo;Book Sphere,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is a literary community and book club. We list books, publish author spotlights and recorded conversations, and connect readers with affiliate reading communities. This Privacy Policy explains what information we collect when you visit this website, contact us, submit a book, apply as an affiliate community or join our newsletter, and how we use, store and protect it.</p>
+    <p>Book Sphere is operated by Book Sphere Media LLC (&ldquo;Book Sphere,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;). Book Sphere is a literary community and book club. We list books, publish author spotlights and recorded conversations, and connect readers with affiliate reading communities. This Privacy Policy explains what information we collect when you visit this website, contact us, submit a book, apply as an affiliate community or join our newsletter, and how we use, store and protect it.</p>
     <p>You can browse the website without giving us any personal information.</p>
   </> },
   { id: "information-we-collect", title: "Information we collect", body: <>
