@@ -1,3 +1,4 @@
+import { Social } from "@/components/Social";
 import Link from "next/link";
 import { Crumbs } from "@/components/Cards";
 import { privacyHero, commitment, privacyPolicy, communityStandards, editorialStandards, termsOfParticipation, intellectualProperty, securityTrust, privacyCta } from "@/data/legal-privacy";
@@ -20,7 +21,7 @@ export default function Page() {
       <Block b={intellectualProperty}><p className="lg-p">{intellectualProperty.description}</p></Block>
       <Block b={securityTrust}><Pts p={securityTrust.points} /></Block>
       <section className="lg-b rv" id="cookies"><p className="lg-n">08</p><div><p className="sec">Cookies</p><h2>Cookie information.</h2><p className="lg-p">The site currently uses no analytics or advertising cookies. If any are introduced, this section will be updated.</p></div></section>
-      <div className="lg-cta rv"><h2>{privacyCta.title}</h2><p>{privacyCta.description} Write to <a href="mailto:bookspheremedia26@gmail.com">bookspheremedia26@gmail.com</a>.</p><Link className="btn" href={privacyCta.cta.href}>{privacyCta.cta.label}</Link></div>
+      <div className="lg-cta rv"><h2>{privacyCta.title}</h2><p>{privacyCta.description}</p><div className="lg-ctab"><Link className="btn" href={privacyCta.cta.href}>{privacyCta.cta.label}</Link><Social /></div></div>
     </div>
   </>);
 }

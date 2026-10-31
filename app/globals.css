@@ -535,3 +535,15 @@ body:not(:has(.jhero,.phead)) .nav:not(.isopen){background:rgba(244,237,225,.84)
 body:not(:has(.jhero,.phead)) .nav:not(.isopen) :is(.links a,.navsub,.srch,.logo){color:var(--ink)}
 body:not(:has(.jhero,.phead)) .nav:not(.isopen) .burger span{background:var(--ink)}
 body:not(:has(.jhero,.phead)) .nav:not(.isopen) .logo .lm{color:var(--accent)}
+/* social icons (Zorvane pattern, j20 colours) */
+.socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.sico{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;border:1px solid rgba(217,183,126,.5);color:var(--gold);text-decoration:none;background:transparent;transition:background .3s,color .3s,border-color .3s,transform .3s var(--ease)}
+.sico svg{width:18px;height:18px}
+.sico:hover,.sico:focus-visible{background:var(--gold);border-color:var(--gold);color:var(--dark);transform:translateY(-2px)}
+.socials-light .sico{color:var(--accent);border-color:rgba(142,107,54,.45)}
+.socials-light .sico:hover,.socials-light .sico:focus-visible{background:var(--dark);border-color:var(--dark);color:var(--gold)}
+.cdet{font-size:15px;color:var(--muted);margin:0}.toc .socials{margin-top:16px}
+.lg-ctab{display:flex;align-items:center;gap:22px;flex-wrap:wrap}.lg-ctab .socials{margin:0}
+@media (prefers-reduced-motion:reduce){.sico:hover{transform:none}}
+.socials .sico{border:1px solid rgba(217,183,126,.5)!important;padding:0!important;margin:0!important}.socials-light .sico{border-color:rgba(142,107,54,.45)!important}.socials .sico:hover{border-color:var(--gold)!important}.socials-light .sico:hover{border-color:var(--dark)!important}
+.socials .sico{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:42px!important;height:42px!important}

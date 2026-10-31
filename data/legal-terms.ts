@@ -134,7 +134,7 @@ export const termsSections: TermItem[] = [
     icon: "mail",
     title: "Contact Us",
     description:
-      "Have questions about these terms? We're happy to help — reach out any time at bookspheremedia26@gmail.com.",
+      "Have questions about these terms? We're happy to help — reach out any time through our contact page.",
   },
 ];
 

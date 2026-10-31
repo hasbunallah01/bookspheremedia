@@ -7,6 +7,6 @@ export const FAQ: [string, string][] = [
   ["Does Book Sphere sell books directly?", "Book Sphere is designed primarily as a literary discovery community. Where an official purchase or publisher link is available, readers may be directed to the relevant external website. Any direct sales functionality will be identified separately if introduced."],
   ["Can I request an author feature?", "Authors may express interest in being considered for a feature. Availability, eligibility, and any applicable requirements should be explained clearly by the Book Sphere team."],
   ["Is author promotion guaranteed?", "No. Inclusion in the community and consideration for an author feature are separate from any promise of specific promotional results. Book Sphere should not guarantee sales, reviews, or a particular level of audience engagement."],
-  ["How can I contact Book Sphere?", "Please use the contact form on the website, or email bookspheremedia26@gmail.com."],
+  ["How can I contact Book Sphere?", "Please use the contact form on the website, or email us using the mail icon on our contact page."],
   ["Can I update my book information?", "Authors can contact the Book Sphere team to request corrections or updates to published book information. If author accounts are introduced, eligible authors may also be able to manage their profiles directly."],
 ];
