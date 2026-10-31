@@ -9,11 +9,12 @@ import { SITE_URL } from "@/lib/content";
 const serif = EB_Garamond({ subsets: ["latin"], weight: ["400", "500"], style: ["normal", "italic"], variable: "--font-garamond" });
 const sans = Karla({ subsets: ["latin"], weight: ["300", "400", "500", "600"], variable: "--font-karla" });
 
+export const viewport = { themeColor: "#1B2233" };
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: "Book Sphere | Discover Books, Authors & Literary Stories", template: "%s | Book Sphere" },
   description: "Explore Book Sphere, a literary community where readers discover books, authors share their stories, and new literary connections begin.",
-  openGraph: { siteName: "Book Sphere", type: "website", images: ["/img/hero.jpg"] },
+  openGraph: { siteName: "Book Sphere", type: "website", images: [{ url: "/brand/og.png", width: 1200, height: 630, alt: "Book Sphere — Real authors. Real conversations. Real impact." }] },
   twitter: { card: "summary_large_image" },
 };
 

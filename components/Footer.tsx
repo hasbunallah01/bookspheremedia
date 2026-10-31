@@ -13,7 +13,7 @@ export function Footer() {
     <footer>
       <div className="wrap">
         <div className="fgr">
-          <div><Logo /><p>A literary community bringing authors and readers closer through books, stories, and discovery.</p></div>
+          <div><Logo variant="footer" /><p>A literary community bringing authors and readers closer through books, stories, and discovery.</p></div>
           {cols.map(([h, ls]) => <div key={h}><h4>{h}</h4>{ls.map(([href, l]) => <Link key={l} href={href}>{l}</Link>)}</div>)}
         </div>
         <Social />
