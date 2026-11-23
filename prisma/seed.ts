@@ -27,6 +27,8 @@ async function main() {
     { slug: "share-a-book-meet-a-friend", name: "Share a Book, Meet a Friend", tagline: "Read · Connect · Share", description: "A community for people who genuinely love reading. Discover new books, share thoughts & connect with real readers.", link: "https://www.facebook.com/share/19mNwawTrn/", logo: "/affiliates/share-a-book-logo.webp", banner: "/affiliates/share-a-book-banner.webp" },
     { slug: "hidy-book-discoveries", name: "Hidy Book Discoveries", tagline: "Discover your next favorite book", description: "Book reviews, recommendations and author features. Authors & publishers welcome.", link: "https://www.facebook.com/share/1JtDuy7EhS/", logo: null, banner: "/affiliates/hidy-banner.webp" },
     { slug: "the-book-crew-readers-community", name: "The Book Crew Readers Community", description: "A readers community on Facebook", link: "https://www.facebook.com/share/1FAnRkhyBP/", logo: "/affiliates/book-crew-logo.webp", banner: "/affiliates/book-crew-banner.webp" },
+    { slug: "book-sphere-reading-hub", name: "Book Sphere Reading Hub", description: "A readers community on Facebook", link: "https://www.facebook.com/share/19nvRF3oek/", logo: "/affiliates/reading-hub-logo.webp", banner: null },
+    { slug: "hassan-book-club", name: "Hassan Book Club", description: "A book club on Facebook", link: "https://www.facebook.com/profile.php?id=61595448637493", logo: "/affiliates/hassan-logo.webp", banner: "/affiliates/hassan-banner.webp" },
   ];
   for (const [i, a] of affs.entries()) await prisma.affiliate.upsert({ where: { slug: a.slug }, update: {}, create: { ...a, sortOrder: i } });
   console.log(`Seeded ${authors.length} authors, ${books.length} books`);

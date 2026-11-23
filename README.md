@@ -9,6 +9,13 @@ Next.js 16 (App Router) + TypeScript + Tailwind 4 + Prisma 6 (SQLite).
     npm run db:setup        # prisma db push + seed (imports the original books/authors once)
     npm run build && npm start   # http://localhost:3000
 
+## Database
+- The production database is PostgreSQL on Neon. Prisma needs **two** variables: `DATABASE_URL` (pooled) and `DIRECT_URL` (unpooled, used by `prisma db push`).
+- If `DATABASE_URL` is missing, every list query returns `[]` and the site deploys an empty catalogue with no error. `next.config.ts` now refuses to build a Vercel production deployment without it.
+- The catalogue is a cache of the repo: `data/authors.ts`, `data/books.ts` and the affiliate list in `prisma/seed.ts`. To rebuild it in an empty or reset database:
+      DATABASE_URL='postgresql://...' node scripts/restore-db.mjs
+  The script pushes the schema, re-seeds (upsert by slug, so admin edits survive) and prints the restored row counts. `DIRECT_URL` is derived from `DATABASE_URL` when it is not set.
+
 ## Content
 - Books and authors live in the database (`Book`, `Author` in `prisma/schema.prisma`) and are managed at `/admin`. `lib/content.ts` is the only read layer for public pages.
 - `data/books.ts` / `data/authors.ts` are now only the seed source: `npx prisma db seed` (`prisma/seed.ts`) imports them unchanged (demo flags, tags, series, quotes, recognition, links) and skips any slug already in the database, so it never overwrites admin edits.
