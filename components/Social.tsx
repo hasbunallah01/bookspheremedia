@@ -1,4 +1,4 @@
-export const FB = "https://www.facebook.com/share/151kdU5hn9G/";
+export const FB = "https://www.facebook.com/share/1EDtLCSNUu/";
 export const MAIL = "bookspheremedia26@gmail.com";
 export function Social({ light = false }: { light?: boolean }) {
   return (
